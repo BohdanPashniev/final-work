@@ -228,12 +228,18 @@ html
     display: flex
     align-items: center
     flex-wrap: wrap
-    border-radius: 12px
     padding: 30px 100px 60px 100px
+    div
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+            display: block
     &__bg-blue
-        background: #1C4280 url('../img/Hilel-Logo-OneLine-White-Uk.png')
+        background: #1C4280
         flex: 1 1 25%
         height: 120px
+        border-top-left-radius: 12px
     &__bg-darkblue
         background: #143646
         flex: 1 1 25%
@@ -246,6 +252,7 @@ html
         background: #9E4DC3
         flex: 1 1 25%
         height: 120px
+        border-top-right-radius: 12px
     &__bg-orange2
         flex: 1 1 25%
         height: 120px
@@ -266,6 +273,7 @@ html
         flex: 1 1 25%
         height: 120px
         background: #EAEAEA
+        border-bottom-left-radius: 12px
     &__bg-darkpurple
         flex: 1 1 25%
         height: 120px
@@ -278,3 +286,4 @@ html
         flex: 1 1 25%
         height: 120px
         background: #000000
+        border-bottom-right-radius: 12px

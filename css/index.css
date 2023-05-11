@@ -289,15 +289,29 @@ html {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  border-radius: 12px;
   padding: 30px 100px 60px 100px;
 }
+.wrapper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrapper div img {
+  display: block;
+}
 .wrapper__bg-blue {
-  background: #1C4280 url("../img/Hilel-Logo-OneLine-White-Uk.png");
+  background: #1C4280;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25%;
           flex: 1 1 25%;
   height: 120px;
+  border-top-left-radius: 12px;
 }
 .wrapper__bg-darkblue {
   background: #143646;
@@ -321,6 +335,7 @@ html {
       -ms-flex: 1 1 25%;
           flex: 1 1 25%;
   height: 120px;
+  border-top-right-radius: 12px;
 }
 .wrapper__bg-orange2 {
   -webkit-box-flex: 1;
@@ -356,6 +371,7 @@ html {
           flex: 1 1 25%;
   height: 120px;
   background: #EAEAEA;
+  border-bottom-left-radius: 12px;
 }
 .wrapper__bg-darkpurple {
   -webkit-box-flex: 1;
@@ -377,4 +393,5 @@ html {
           flex: 1 1 25%;
   height: 120px;
   background: #000000;
+  border-bottom-right-radius: 12px;
 }
