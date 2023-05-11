@@ -1,0 +1,90 @@
+$main_regular: #323264
+$main_alt: #46466E
+$main_soft: #686887
+$accent: #F0145A
+$active_regular: #24A3FF
+$active_hover: #0085FF
+$active_active: #006CCF
+$grey_bg: #F5F5FA
+$grey_bg_alt: #EDEDF7
+$grey_bg_text: #B3B3BA
+$grey_bg_separator: #E6E6F0
+
+.header
+    display: flex
+    flex-direction: row
+    padding: 50px 160px 0px 160px
+    justify-content: space-between
+    align-items: flex-start
+    gap: 381px
+    cursor: default
+    height: 116px
+    &__contacts
+        position: relative
+        z-index: 2
+        &__body
+            display: flex
+            position: relative
+            align-items: center
+            padding-bottom: 15px
+        .lang
+            a
+                font-weight: 700
+                font-size: 12px
+                line-height: 15px
+                text-align: center
+                letter-spacing: 1px
+                border-radius: 8px
+                color: #FFFFFF
+                transition: all 0.5s
+                padding: 5px 7px
+                &:hover
+                    background: rgba(255, 255, 255, 0.2)
+                    border-radius: 8px
+                    transition: all 0.5s
+                &:active
+                    background:#F0145A
+                    border-radius: 8px
+                    transition: all 0.5s
+        .header__contacts__number
+            font-weight: 700
+            font-size: 16px
+            line-height: 20px
+            text-align: right
+            color: #FFFFFF
+        span
+            padding: 0 6px
+            svg
+                display: inline-block
+                margin-bottom: 1px
+        p
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            text-align: right
+            color: #FFFFFF
+        .facebook
+            svg
+                path
+                    fill: white
+                    transition: all 3s
+                    &:hover
+                        fill: $accent
+                        transition: all 0.3s
+                
+        &__nav
+            text-align: right
+            li
+                display: inline
+            a
+                font-size: 16px
+                line-height: 20px
+                font-weight: 700
+                color: #FFFFFF
+                margin-left: 15px
+                padding-bottom: 3px
+                &:hover
+                    border-bottom: 2px solid white
+                &:active
+                    color: $accent
+                    border-bottom: 2px solid $accent 

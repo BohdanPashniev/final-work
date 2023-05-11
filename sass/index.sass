@@ -1,0 +1,280 @@
+@import url(header.css)
+@import url(myFrameworks.css)
+$main_regular: #323264
+$main_alt: #46466E
+$main_soft: #686887
+$accent: #F0145A
+$active_regular: #24A3FF
+$active_hover: #0085FF
+$active_active: #006CCF
+$grey_bg: #F5F5FA
+$grey_bg_alt: #EDEDF7
+$grey_bg_text: #B3B3BA
+$grey_bg_separator: #E6E6F0
+@mixin h2_reg
+    font-size: 30px
+    font-weight: 700
+    line-height: 37px
+    letter-spacing: 0em
+    text-align: left
+
+@mixin gradient_regular
+    background: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%)
+@mixin gradien_soft
+    background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%)
+@mixin gradient_red
+    background: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%)
+@mixin gradient_supersoft
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%)
+@mixin gradient_redtext
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
+
+.container
+    max-width: 1470px
+    padding: 0 15px
+    margin: 0 auto
+
+html
+    font-family: 'Montserrat', sans-serif
+    font-size: 16px
+    scroll-behavior: smooth
+
+.top_section
+    @include gradient_supersoft
+    border-radius: 0px 0px 12px 12px
+    position: relative
+    box-shadow: 0px 0px 12px 12px #CACADB
+    .symbol
+        position: absolute
+        left: calc(50% - 872.34px/2 + 0.17px)
+        top: -114px
+        z-index: 0
+        p
+            position: absolute
+            left: calc(65% - 800px/2)
+            top: calc(50% - 46px/2)
+            font-weight: 700
+            font-size: 38px
+            line-height: 46px
+            text-align: center
+            color: #FFFFFF
+    .svg
+        position: relative
+        a
+            circle
+                transition: all 1s
+            path
+                transition: all 0.5s
+            &:hover
+                circle
+                    stroke: $accent
+                path
+                    stroke: $accent
+        .scroll
+            position: absolute
+            left: calc(50% - 42px/2)
+            bottom: -825px
+
+.experience
+    padding-top: 960px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 60px
+    padding-bottom: 56px
+    &__list
+        display: flex
+        flex-direction: column
+        border-right: 2px solid rgba(255, 255, 255, 0.3)
+        padding-right: 60px
+        a
+            cursor: pointer
+            color: #B3B3BA
+            &:active
+                @include gradient_redtext
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                background-clip: text
+            font-weight: 700
+            font-size: 38px
+            line-height: 46px
+            text-align: right
+            padding-bottom: 30px
+            &:hover
+                -webkit-text-fill-color: $accent
+                background: none
+    &__desc
+        max-width: 861px
+        h2
+            @include h2_reg
+            color: #FFFFFF
+            padding-bottom: 30px
+        p
+            font-weight: 400
+            font-size: 19px
+            line-height: 30px
+            color: #FFFFFF
+.services
+    padding: 0 160px 60px
+    margin: 0 auto
+    &__link
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 0px
+        gap: 2px
+    h4
+        @include gradient_redtext
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        // text-fill-color: transparent
+        font-weight: 700
+        font-size: 38px
+        line-height: 46px
+        padding-bottom: 60px
+        padding-top: 10px
+    a
+        font-weight: 700
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #B3B3BA
+        &:hover
+            color: $accent
+    .row
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        padding: 0px
+        margin-bottom: 60px
+        column-gap: 60px
+        img
+            padding: 14px
+            background: #FFFFFF
+            border-radius: 24px
+            margin-bottom: 30px
+        h3
+            font-weight: 700
+            font-size: 22px
+            line-height: 27px
+            color: $active_regular
+            margin-bottom: 15px
+        p
+            font-weight: 400
+            max-width: 493px
+            font-size: 16px
+            line-height: 26px
+            color: #FFFFFF
+.team
+    padding: 60px 160px 100px
+    position: relative
+.swiper
+    border-radius: 12px
+.swiper-body
+    flex-direction: row
+    align-items: center
+    padding: 0px
+    display: flex
+    border-radius: 12px
+    .bg-item
+        width: 400px
+        min-height: 298px
+        background: url("../img/team.png"), #EDEDF7
+    .item-desc
+        width: 1200px
+        background: $grey_bg
+        padding: 20px 20px 20px 30px
+    .desc-link
+        
+        a
+            font-weight: 700
+            font-size: 14px
+            line-height: 17px
+            letter-spacing: 1px
+            text-transform: uppercase
+            color: $active_regular
+            margin-bottom: 5px
+    .description
+        @include gradient_redtext
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        font-weight: 700
+        font-size: 38px
+        line-height: 46px
+    h4
+        font-weight: 700
+        font-size: 16px
+        line-height: 20px
+        color: #B3B3BA
+    p
+        font-weight: 400
+        font-size: 14px
+        line-height: 22px
+        color: #B3B3BA
+        margin-bottom: 30px
+.clients
+    h3
+        font-weight: 700
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #323264
+        text-align: center
+.wrapper
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    border-radius: 12px
+    padding: 30px 100px 60px 100px
+    &__bg-blue
+        background: #1C4280 url('../img/Hilel-Logo-OneLine-White-Uk.png')
+        flex: 1 1 25%
+        height: 120px
+    &__bg-darkblue
+        background: #143646
+        flex: 1 1 25%
+        height: 120px
+    &__bg-orange
+        background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30
+        flex: 1 1 25%
+        height: 120px
+    &__bg-purple
+        background: #9E4DC3
+        flex: 1 1 25%
+        height: 120px
+    &__bg-orange2
+        flex: 1 1 25%
+        height: 120px
+        background: #FD9339
+    &__bg-grey
+        flex: 1 1 25%
+        height: 120px
+        background: #E2E2E4
+    &__bg-red
+        flex: 1 1 25%
+        height: 120px
+        background: #C71C36
+    &__bg-white
+        flex: 1 1 25%
+        height: 120px
+        background: #DCF3F9
+    &__bg-softgrey
+        flex: 1 1 25%
+        height: 120px
+        background: #EAEAEA
+    &__bg-darkpurple
+        flex: 1 1 25%
+        height: 120px
+        background: #282240
+    &__bg-darkblue2
+        flex: 1 1 25%
+        height: 120px
+        background: #1D4568
+    &__bg-black
+        flex: 1 1 25%
+        height: 120px
+        background: #000000

@@ -1,0 +1,380 @@
+@import url(header.css);
+@import url(myFrameworks.css);
+.container {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+.top_section {
+  background: -o-linear-gradient(221.43deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0px 0px 12px 12px;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 12px 12px #CACADB;
+          box-shadow: 0px 0px 12px 12px #CACADB;
+}
+.top_section .symbol {
+  position: absolute;
+  left: calc(50% - 436.17px + 0.17px);
+  top: -114px;
+  z-index: 0;
+}
+.top_section .symbol p {
+  position: absolute;
+  left: calc(65% - 400px);
+  top: calc(50% - 23px);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.top_section .svg {
+  position: relative;
+}
+.top_section .svg a circle {
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.top_section .svg a path {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.top_section .svg a:hover circle {
+  stroke: #F0145A;
+}
+.top_section .svg a:hover path {
+  stroke: #F0145A;
+}
+.top_section .svg .scroll {
+  position: absolute;
+  left: calc(50% - 21px);
+  bottom: -825px;
+}
+
+.experience {
+  padding-top: 960px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 60px;
+  padding-bottom: 56px;
+}
+.experience__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  padding-right: 60px;
+}
+.experience__list a {
+  cursor: pointer;
+  color: #B3B3BA;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  text-align: right;
+  padding-bottom: 30px;
+}
+.experience__list a:active {
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.experience__list a:hover {
+  -webkit-text-fill-color: #F0145A;
+  background: none;
+}
+.experience__desc {
+  max-width: 861px;
+}
+.experience__desc h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+  padding-bottom: 30px;
+}
+.experience__desc p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.services {
+  padding: 0 160px 60px;
+  margin: 0 auto;
+}
+.services__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
+  gap: 2px;
+}
+.services h4 {
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  padding-bottom: 60px;
+  padding-top: 10px;
+}
+.services a {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #B3B3BA;
+}
+.services a:hover {
+  color: #F0145A;
+}
+.services .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0px;
+  margin-bottom: 60px;
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
+}
+.services .row img {
+  padding: 14px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  margin-bottom: 30px;
+}
+.services .row h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #24A3FF;
+  margin-bottom: 15px;
+}
+.services .row p {
+  font-weight: 400;
+  max-width: 493px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+.team {
+  padding: 60px 160px 100px;
+  position: relative;
+}
+
+.swiper {
+  border-radius: 12px;
+}
+
+.swiper-body {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 12px;
+}
+.swiper-body .bg-item {
+  width: 400px;
+  min-height: 298px;
+  background: url("../img/team.png"), #EDEDF7;
+}
+.swiper-body .item-desc {
+  width: 1200px;
+  background: #F5F5FA;
+  padding: 20px 20px 20px 30px;
+}
+.swiper-body .desc-link a {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24A3FF;
+  margin-bottom: 5px;
+}
+.swiper-body .description {
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+}
+.swiper-body h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B3B3BA;
+}
+.swiper-body p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3B3BA;
+  margin-bottom: 30px;
+}
+
+.clients h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #323264;
+  text-align: center;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 12px;
+  padding: 30px 100px 60px 100px;
+}
+.wrapper__bg-blue {
+  background: #1C4280 url("../img/Hilel-Logo-OneLine-White-Uk.png");
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+}
+.wrapper__bg-darkblue {
+  background: #143646;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+}
+.wrapper__bg-orange {
+  background: -webkit-gradient(linear, left bottom, left top, from(#F48B30), to(#F48B30)), #F48B30;
+  background: -o-linear-gradient(bottom, #F48B30, #F48B30), #F48B30;
+  background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+}
+.wrapper__bg-purple {
+  background: #9E4DC3;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+}
+.wrapper__bg-orange2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+  background: #FD9339;
+}
+.wrapper__bg-grey {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+  background: #E2E2E4;
+}
+.wrapper__bg-red {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+  background: #C71C36;
+}
+.wrapper__bg-white {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+  background: #DCF3F9;
+}
+.wrapper__bg-softgrey {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+  background: #EAEAEA;
+}
+.wrapper__bg-darkpurple {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+  background: #282240;
+}
+.wrapper__bg-darkblue2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+  background: #1D4568;
+}
+.wrapper__bg-black {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 120px;
+  background: #000000;
+}

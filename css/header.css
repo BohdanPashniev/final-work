@@ -1,0 +1,114 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 50px 160px 0px 160px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 381px;
+  cursor: default;
+  height: 116px;
+}
+.header__contacts {
+  position: relative;
+  z-index: 2;
+}
+.header__contacts__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 15px;
+}
+.header__contacts .lang a {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 5px 7px;
+}
+.header__contacts .lang a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.header__contacts .lang a:active {
+  background: #F0145A;
+  border-radius: 8px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.header__contacts .header__contacts__number {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  color: #FFFFFF;
+}
+.header__contacts span {
+  padding: 0 6px;
+}
+.header__contacts span svg {
+  display: inline-block;
+  margin-bottom: 1px;
+}
+.header__contacts p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  color: #FFFFFF;
+}
+.header__contacts .facebook svg path {
+  fill: white;
+  -webkit-transition: all 3s;
+  -o-transition: all 3s;
+  transition: all 3s;
+}
+.header__contacts .facebook svg path:hover {
+  fill: #F0145A;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header__contacts__nav {
+  text-align: right;
+}
+.header__contacts__nav li {
+  display: inline;
+}
+.header__contacts__nav a {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-left: 15px;
+  padding-bottom: 3px;
+}
+.header__contacts__nav a:hover {
+  border-bottom: 2px solid white;
+}
+.header__contacts__nav a:active {
+  color: #F0145A;
+  border-bottom: 2px solid #F0145A;
+}

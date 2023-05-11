@@ -1,0 +1,8 @@
+* {margin: 0;padding: 0;border: 0;}
+*, *::before, *::after {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+h1, h2, h3, h4, h5, h6 {margin: 0;padding: 0;border: 0;font-size: inherit;font-weight: inherit;}
+/* ul li {list-style: none;} */
+nav,footer,header,aside {display: block;}
+a {text-decoration: none; color: inherit;}
+
+/* ----------------------------------------------------------- */
