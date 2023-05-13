@@ -121,6 +121,7 @@ html
         display: flex
         flex-direction: row
         align-items: center
+        justify-content: flex-start
         padding: 0px
         gap: 2px
     h4
@@ -187,7 +188,9 @@ html
         background: $grey_bg
         padding: 20px 20px 20px 30px
     .desc-link
-        
+        display: flex
+        align-items: center
+        justify-content: flex-start
         a
             font-weight: 700
             font-size: 14px
@@ -195,7 +198,10 @@ html
             letter-spacing: 1px
             text-transform: uppercase
             color: $active_regular
-            margin-bottom: 5px
+            &:hover
+                color: $active_hover
+            &:active
+                color: $active_active
     .description
         @include gradient_redtext
         -webkit-background-clip: text
@@ -287,3 +293,193 @@ html
         height: 120px
         background: #000000
         border-bottom-right-radius: 12px
+.publications
+    background-color: #F5F5FA
+    padding: 30px 160px 0px 160px
+    &__link
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        a
+            font-weight: 700
+            font-size: 14px
+            line-height: 17px
+            letter-spacing: 1px
+            text-transform: uppercase
+            color: $active_regular
+            &:hover
+                color: $active_hover
+                path
+                    color: $active_hover
+            &:active
+                color: $active_active
+                path
+                    color: $active_active
+    h4
+        font-weight: 700
+        font-size: 38px
+        line-height: 46px
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        padding-bottom: 30px
+        padding-top: 10px
+    &__body
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        padding: 0px
+        gap: 30px
+    &__item
+        width: 513px
+        background: #FFF
+        border-radius: 12px
+        height: 430px
+        a
+            display: block
+            cursor: pointer
+            border-radius: 12px
+            height: 100%
+            transition: all 0.5s
+            &:hover
+                background: #E6E6F0
+                transition: all 0.5s
+                .line
+                    background: #ffffff
+                    transition: all 0.5s
+        img
+            max-width: 100%
+            display: block
+        .line
+            max-width: 436.33px
+            height: 4px
+            background: #E6E6F0
+            margin: 0 auto
+            transition: all 0.5s
+        h5
+            font-weight: 700
+            font-size: 16px
+            line-height: 20px
+            color: $active_regular  
+            padding: 30px 30px 15px 30px
+            
+        span
+            display: block
+            font-weight: 700
+            font-size: 12px
+            line-height: 15px
+            letter-spacing: 1px
+            text-transform: uppercase
+            color: #B3B3BA
+            padding-bottom: 15px
+            padding-left: 30px
+        p
+            font-weight: 400
+            font-size: 14px
+            line-height: 22px
+            color: #000000
+            padding: 15px 30px 30px 30px
+.footer
+    background: #F5F5FA
+    padding: 30px 160px
+    &__line
+        max-width: 1600px
+        height: 2px
+        background: #E6E6F0
+        margin: 0 auto
+        margin-bottom: 30px
+    &__body
+        display: flex
+        justify-content: space-between
+    &__contacts
+        .frame1
+            display: flex
+            column-gap: 26px
+            align-items: center
+            p
+                font-weight: 400
+                font-size: 16px
+                line-height: 20px
+                color: #323264
+            a
+                font-weight: 700
+                font-size: 12px
+                line-height: 15px
+                letter-spacing: 1px
+                text-transform: uppercase
+                color: $active_regular
+                position: relative
+                &:hover
+                    color: $active_hover
+                &:active
+                    color: $active_active
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 6px
+                    height: 6px
+                    background: #B3B3BA
+                    border-radius: 50%
+                    top: 4.5px
+                    cursor: default
+                    left: -16px
+        .frame2
+            display: flex
+            align-items: center
+            column-gap: 26px
+            padding-top: 30px
+            &__facebook
+                path
+                    transition: all 0.5s
+                &:hover
+                    path
+                        fill: $active_hover
+                        transition: all 0.5s
+                &:active
+                    path
+                        fill: $active_active
+                        transition: all 0.5s
+            &__number
+                font-weight: 700
+                font-size: 16px
+                line-height: 20px
+                text-align: right
+                color: #46466E
+                position: relative
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 6px
+                    height: 6px
+                    background: #B3B3BA
+                    border-radius: 50%
+                    top: 7px
+                    cursor: default
+                    left: -15px
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 6px
+                    height: 6px
+                    background: #B3B3BA
+                    border-radius: 50%
+                    top: 7px
+                    right: -16px
+                    cursor: default
+            &__mail
+                font-weight: 700
+                font-size: 16px
+                line-height: 20px
+                color: $active_regular
+                &:hover
+                    color: $active_hover
+                &:active
+                    color: $active_active
+    p
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        text-align: right
+        color: #B3B3BA

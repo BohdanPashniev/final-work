@@ -64,6 +64,31 @@
   line-height: 20px;
   text-align: right;
   color: #FFFFFF;
+  position: relative;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.header__contacts .header__contacts__number::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #E6E6F0;
+  border-radius: 50%;
+  cursor: default;
+  top: 7px;
+  left: 6px;
+}
+.header__contacts .header__contacts__number::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #E6E6F0;
+  cursor: default;
+  border-radius: 50%;
+  top: 7px;
+  right: 7px;
 }
 .header__contacts span {
   padding: 0 6px;
@@ -79,17 +104,16 @@
   text-align: right;
   color: #FFFFFF;
 }
-.header__contacts .facebook svg path {
-  fill: white;
-  -webkit-transition: all 3s;
-  -o-transition: all 3s;
-  transition: all 3s;
+.header__contacts .facebook a path {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
-.header__contacts .facebook svg path:hover {
+.header__contacts .facebook a:hover path {
   fill: #F0145A;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .header__contacts__nav {
   text-align: right;
