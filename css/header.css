@@ -6,7 +6,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 50px 160px 0px 160px;
+  padding-top: 50px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -17,9 +17,48 @@
   cursor: default;
   height: 116px;
 }
+@media screen and (max-width: 1029px) {
+  .header {
+    gap: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__logo {
+    padding-top: 55px;
+    z-index: 2;
+  }
+}
 .header__contacts {
-  position: relative;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .header__contacts {
+    padding: 0;
+    gap: 120px;
+    position: absolute;
+  }
 }
 .header__contacts__body {
   display: -webkit-box;
@@ -30,6 +69,11 @@
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .header__contacts__body {
+    padding: 0;
+  }
 }
 .header__contacts .lang a {
   font-weight: 700;
@@ -118,15 +162,23 @@
 .header__contacts__nav {
   text-align: right;
 }
+@media screen and (max-width: 768px) {
+  .header__contacts__nav {
+    text-align: left;
+  }
+}
 .header__contacts__nav li {
-  display: inline;
+  display: inline-block;
+  margin-left: 15px;
+}
+.header__contacts__nav li:first-child {
+  margin-left: 0;
 }
 .header__contacts__nav a {
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   color: #FFFFFF;
-  margin-left: 15px;
   padding-bottom: 3px;
 }
 .header__contacts__nav a:hover {

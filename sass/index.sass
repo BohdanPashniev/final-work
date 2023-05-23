@@ -30,25 +30,68 @@ $grey_bg_separator: #E6E6F0
     background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
 
 .container
-    max-width: 1470px
+    max-width: 1630px
     padding: 0 15px
     margin: 0 auto
-
+    @media screen and ( max-width: 1440px )
+        max-width: 1320px
+    @media screen and ( max-width: 1024px )
+        max-width: 904px
+        padding: 0 30px
+        margin: auto
+    @media screen and ( max-width: 768px )
+        max-width: 648px
+        padding: 0 30px
+        margin: auto
+// *
+//     border: 1px solid
 html
     font-family: 'Montserrat', sans-serif
     font-size: 16px
     scroll-behavior: smooth
+    
 
 .top_section
     @include gradient_supersoft
     border-radius: 0px 0px 12px 12px
     position: relative
-    box-shadow: 0px 0px 12px 12px #CACADB
+    margin-bottom: 80px
+    &::before
+        content: ""
+        position: absolute
+        bottom: -10px
+        height: 10px
+        left: 10px
+        background-color: #cacadb
+        width: calc( 100% - 20px )
+        border-radius: 0px 0px 12px 12px
+    &::after
+        content: ""
+        position: absolute
+        bottom: -20px
+        height: 10px
+        left: 20px
+        background-color: #E7E7F2
+        width: calc( 100% - 40px )
+        border-radius: 0px 0px 12px 12px
     .symbol
         position: absolute
         left: calc(50% - 872.34px/2 + 0.17px)
         top: -114px
         z-index: 0
+        @media screen and ( max-width: 1024px )
+            left: calc(50% - 294.98px - 0.02px)
+            top: calc(50% - 132px)
+        @media screen and ( max-width: 768px )
+            left: calc(50% - 420.98px - 0.02px)
+            top: calc(50% - 222px)
+        svg
+            @media screen and ( max-width: 1024px )
+                width: 669.96px
+                height: 768px
+            @media screen and ( max-width: 768px )
+                width: 100%
+                height: 1024px
         p
             position: absolute
             left: calc(65% - 800px/2)
@@ -58,6 +101,9 @@ html
             line-height: 46px
             text-align: center
             color: #FFFFFF
+            @media screen and ( max-width: 1024px )
+                left: calc(50% - 277px)
+                top: calc(50% - 46px/2)
     .svg
         position: relative
         a
@@ -74,6 +120,10 @@ html
             position: absolute
             left: calc(50% - 42px/2)
             bottom: -825px
+            @media screen and ( max-width: 1024px )
+                bottom: -625px
+            @media screen and ( max-width: 768px )
+                bottom: -707px
 
 .experience
     padding-top: 960px
@@ -82,29 +132,65 @@ html
     justify-content: center
     gap: 60px
     padding-bottom: 56px
+    @media screen and ( max-width: 1024px )
+        padding-top: 730px
+    @media screen and ( max-width: 768px )
+        padding: 850px 30px 60px 30px
+        display: block
+        max-width: 648px
+        margin: 0 auto
     &__list
-        display: flex
-        flex-direction: column
         border-right: 2px solid rgba(255, 255, 255, 0.3)
         padding-right: 60px
-        a
-            cursor: pointer
-            color: #B3B3BA
-            &:active
-                @include gradient_redtext
-                -webkit-background-clip: text
-                -webkit-text-fill-color: transparent
-                background-clip: text
-            font-weight: 700
-            font-size: 38px
-            line-height: 46px
-            text-align: right
-            padding-bottom: 30px
-            &:hover
-                -webkit-text-fill-color: $accent
-                background: none
+        @media screen and ( max-width: 1024px )
+            flex: 0 0 40%
+        @media screen and ( max-width: 768px )
+            border-right: 0
+            border-bottom: 4px solid rgba(255, 255, 255, 0.3)
+            padding-right: 0px
+            padding-bottom: 60px
+            overflow: hidden
+        nav
+            display: flex
+            flex-direction: column
+            @media screen and ( max-width: 768px )
+                display: flex
+                flex-direction: row
+                column-gap: 30px
+                height: 46px
+            
+            a
+                cursor: pointer
+                color: #B3B3BA
+                font-weight: 700
+                font-size: 38px
+                line-height: 46px
+                text-align: right
+                padding-bottom: 30px
+                @media screen and ( max-width: 768px )
+                    padding-bottom: 0px
+                    white-space: nowrap
+                &:last-of-type
+                    padding-bottom: 0
+                &:active
+                    @include gradient_redtext
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
+                    background-clip: text
+                &:hover
+                    -webkit-text-fill-color: $accent
+                    background: none
     &__desc
+        position: relative
         max-width: 861px
+        @media screen and ( max-width: 1024px )
+            flex: 0 0 40%
+        @media screen and ( max-width: 768px )
+            padding-top: 60px
+        .experience__blocks
+            display: none
+            &:target
+                display: block
         h2
             @include h2_reg
             color: #FFFFFF
@@ -115,7 +201,7 @@ html
             line-height: 30px
             color: #FFFFFF
 .services
-    padding: 0 160px 60px
+    padding-bottom: 60px
     margin: 0 auto
     &__link
         display: flex
@@ -146,31 +232,42 @@ html
             color: $accent
     .row
         display: flex
-        flex-direction: row
-        align-items: flex-start
+        justify-content: space-between
+        flex-wrap: wrap
         padding: 0px
         margin-bottom: 60px
-        column-gap: 60px
+        row-gap: 60px
         img
             padding: 14px
             background: #FFFFFF
             border-radius: 24px
             margin-bottom: 30px
-        h3
-            font-weight: 700
-            font-size: 22px
-            line-height: 27px
-            color: $active_regular
-            margin-bottom: 15px
+        &__item
+            flex: 0 0 30%
+            @media screen and ( max-width: 1024px )
+                flex: 0 0 30%
+            @media screen and ( max-width: 768px )
+                flex: 1 0 50%
+            a
+                display: block
+                font-weight: 700
+                font-size: 22px
+                line-height: 27px
+                color: $active_regular
+                text-align: left
+                letter-spacing: 0px
+                text-transform: none
+                &:hover
+                    color: $accent
         p
+            padding-top: 15px
             font-weight: 400
-            max-width: 493px
             font-size: 16px
             line-height: 26px
             color: #FFFFFF
 .team
-    padding: 60px 160px 100px
     position: relative
+    margin-bottom: 106px
 .swiper
     border-radius: 12px
 .swiper-body
@@ -179,14 +276,35 @@ html
     padding: 0px
     display: flex
     border-radius: 12px
+    max-height: 1087px
+    @media screen and ( max-width: 1440px )
+        height: 344px !important
+        border-radius: 12px
+    @media screen and ( max-width: 1024px )
+        height: 528px !important
     .bg-item
-        width: 400px
-        min-height: 298px
-        background: url("../img/team.png"), #EDEDF7
+        flex: 0 0 25%
+        min-height: 298px !important
+        background: no-repeat url("../img/team.png")
+        @media screen and ( max-width: 1440px )
+            background: no-repeat url("../img/team1.png")
+            height: 344px !important
+            flex: 0 0 30%
+        @media screen and ( max-width: 1024px )
+            background: no-repeat url("../img/team2.png")
+            height: 528px !important
+            flex: 0 0 40%
     .item-desc
-        width: 1200px
+        flex: 0 2 auto
         background: $grey_bg
         padding: 20px 20px 20px 30px
+        max-height: 1087px
+        height: 298px !important
+        @media screen and ( max-width: 1440px )
+            height: 344px !important
+        @media screen and ( max-width: 1024px )
+            height: 528px !important
+        
     .desc-link
         display: flex
         align-items: center
@@ -221,6 +339,7 @@ html
         line-height: 22px
         color: #B3B3BA
         margin-bottom: 30px
+        
 .clients
     h3
         font-weight: 700
@@ -235,10 +354,17 @@ html
     align-items: center
     flex-wrap: wrap
     padding: 30px 100px 60px 100px
+    @media screen and ( max-width: 1440px )
+        padding: 30px 0 60px 0
+        
     div
+        flex: 0 0 25%
         display: flex
         justify-content: center
         align-items: center
+        @media screen and ( max-width: 901px )
+            flex: 0 0 33.3333%
+
         img
             display: block
     &__bg-blue
@@ -246,6 +372,8 @@ html
         flex: 1 1 25%
         height: 120px
         border-top-left-radius: 12px
+        @media screen and ( max-width: 1440px )
+            border-top-left-radius: 0
     &__bg-darkblue
         background: #143646
         flex: 1 1 25%
@@ -259,6 +387,8 @@ html
         flex: 1 1 25%
         height: 120px
         border-top-right-radius: 12px
+        @media screen and ( max-width: 1440px )
+            border-top-right-radius: 0
     &__bg-orange2
         flex: 1 1 25%
         height: 120px
@@ -280,6 +410,8 @@ html
         height: 120px
         background: #EAEAEA
         border-bottom-left-radius: 12px
+        @media screen and ( max-width: 1440px )
+            border-bottom-left-radius: 0
     &__bg-darkpurple
         flex: 1 1 25%
         height: 120px
@@ -293,9 +425,11 @@ html
         height: 120px
         background: #000000
         border-bottom-right-radius: 12px
+        @media screen and ( max-width: 1440px )
+            border-bottom-right-radius: 0
 .publications
     background-color: #F5F5FA
-    padding: 30px 160px 0px 160px
+    padding-top: 30px
     &__link
         display: flex
         align-items: center
@@ -337,6 +471,13 @@ html
         background: #FFF
         border-radius: 12px
         height: 430px
+        overflow: hidden
+        @media screen and ( max-width: 1440px )
+            width: 420px
+            height: 450px
+        @media screen and ( max-width: 1025px )
+            width: 281.33px
+            height: 556px
         a
             display: block
             cursor: pointer
@@ -352,6 +493,7 @@ html
         img
             max-width: 100%
             display: block
+            height: 200px
         .line
             max-width: 436.33px
             height: 4px
@@ -381,9 +523,10 @@ html
             line-height: 22px
             color: #000000
             padding: 15px 30px 30px 30px
+            
 .footer
     background: #F5F5FA
-    padding: 30px 160px
+    padding: 30px 0 30px
     &__line
         max-width: 1600px
         height: 2px

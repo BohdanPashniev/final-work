@@ -357,7 +357,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-    bottom: var(--swiper-pagination-bottom, 50px);
+    bottom: var(--swiper-pagination-bottom, -60px);
     top: var(--swiper-pagination-top, auto);
     left: 0;
     width: 100%
