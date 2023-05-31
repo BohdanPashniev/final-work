@@ -19,7 +19,7 @@
 }
 @media screen and (max-width: 1029px) {
   .header {
-    gap: 100px;
+    gap: 20px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -35,12 +35,31 @@
         -ms-flex-pack: start;
             justify-content: flex-start;
     gap: 30px;
+    margin-bottom: 90px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header {
+    margin-bottom: 0;
+    margin-top: 15px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media screen and (max-width: 768px) {
   .header__logo {
     padding-top: 55px;
     z-index: 2;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header__logo {
+    padding: 0;
   }
 }
 .header__menu {
@@ -52,14 +71,14 @@
   z-index: 2;
   padding: 7px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   .header__menu {
     display: block;
   }
 }
 .header__menu::before {
   content: "";
-  background-color: #fff;
+  background-color: #323264;
   position: absolute;
   width: 18px;
   height: 2px;
@@ -67,37 +86,35 @@
 }
 .header__menu::after {
   content: "";
-  background-color: #fff;
+  background-color: #323264;
   position: absolute;
   width: 18px;
   height: 2px;
   bottom: 10px;
 }
 .header__menu span {
-  background-color: #fff;
+  background-color: #323264;
   position: absolute;
   top: 45%;
   width: 18px;
   height: 2px;
 }
 .header__menu-burger {
+  margin: 0;
+  background: #323264;
+  position: absolute;
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  background-color: #444;
-  position: absolute;
-  top: -2500%;
-  right: 0;
-  -webkit-transition: all ease-out 0.5s;
-  -o-transition: all ease-out 0.5s;
-  transition: all ease-out 0.5s;
-}
-.header__menu-burger .active {
-  -webkit-transition: all ease-out 0.5s;
-  -o-transition: all ease-out 0.5s;
-  transition: all ease-out 0.5s;
+  top: -3290%;
+  right: -30px;
+  -webkit-transition: all ease-out 1s;
+  -o-transition: all ease-out 1s;
+  transition: all ease-out 1s;
+  overflow: hidden;
+  z-index: 1;
 }
 .header__menu-burger ul {
+  padding: 64px 12px;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -113,10 +130,19 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: #FFF;
+}
+.header__menu-burger ul .close {
+  top: 121px;
+  right: 30px;
+  position: absolute;
+  color: #EC6F5D;
+  z-index: 2;
+  font-size: 18px;
 }
 .header__menu-burger ul li {
   cursor: pointer;
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,19 +154,28 @@
   transition: all ease-in 1s;
   border: 1px solid transparent;
   padding: 10px 0;
+  color: #24A3FF;
+  border-radius: 12px;
+  background: #F5F5FA;
+  margin-bottom: 15px;
 }
 .header__menu-burger ul li:hover {
-  background-color: #5c5c5c;
-  border: 1px solid orange;
   -webkit-transition: all ease-in 0.2s;
   -o-transition: all ease-in 0.2s;
   transition: all ease-in 0.2s;
-  padding: 10px 0;
-  color: orange;
+}
+.header__menu-burger ul li:active {
+  background: #E6E6F0;
 }
 .header .active {
   display: block;
-  top: 0%;
+  width: 100vw;
+  height: 100vh;
+  top: -83px;
+  right: -32px;
+  overflow: hidden;
+  background: #323264;
+  z-index: 1;
 }
 .header__contacts {
   z-index: 2;
@@ -154,9 +189,11 @@
 }
 @media screen and (max-width: 768px) {
   .header__contacts {
-    padding: 0;
     gap: 120px;
     position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
   }
 }
 .header__contacts__body {
@@ -174,6 +211,14 @@
     padding: 0;
   }
 }
+@media screen and (max-width: 425px) {
+  .header__contacts__body {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background: #F5F5FA;
+    padding: 12.5px 0;
+  }
+}
 .header__contacts .lang a {
   font-weight: 700;
   font-size: 12px;
@@ -181,18 +226,19 @@
   text-align: center;
   letter-spacing: 1px;
   border-radius: 8px;
-  color: #FFFFFF;
+  color: #B3B3BA;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
   padding: 5px 7px;
 }
 .header__contacts .lang a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background-color: #B3B3BA;
   border-radius: 8px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  color: white;
 }
 .header__contacts .lang a:active {
   background: #F0145A;
@@ -200,13 +246,14 @@
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  color: white;
 }
 .header__contacts .header__contacts__number {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-align: right;
-  color: #FFFFFF;
+  color: #B3B3BA;
   position: relative;
   padding-left: 18px;
   padding-right: 18px;
@@ -222,6 +269,11 @@
   top: 7px;
   left: 6px;
 }
+@media screen and (max-width: 425px) {
+  .header__contacts .header__contacts__number::before {
+    content: none;
+  }
+}
 .header__contacts .header__contacts__number::after {
   content: "";
   position: absolute;
@@ -233,6 +285,11 @@
   top: 7px;
   right: 7px;
 }
+@media screen and (max-width: 425px) {
+  .header__contacts .header__contacts__number::after {
+    content: none;
+  }
+}
 .header__contacts span {
   padding: 0 6px;
 }
@@ -240,16 +297,31 @@
   display: inline-block;
   margin-bottom: 1px;
 }
+@media screen and (max-width: 425px) {
+  .header__contacts span svg {
+    display: none;
+  }
+}
 .header__contacts p {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-align: right;
-  color: #FFFFFF;
+  color: #B3B3BA;
 }
 @media screen and (max-width: 768px) {
   .header__contacts p {
     color: #B3B3BA;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header__contacts p {
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header__contacts .facebook {
+    display: none;
   }
 }
 .header__contacts .facebook a path {
@@ -271,7 +343,7 @@
     text-align: left;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   .header__contacts__nav {
     display: none;
   }
@@ -287,11 +359,12 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #24A3FF;
   padding-bottom: 3px;
 }
 .header__contacts__nav a:hover {
-  border-bottom: 2px solid white;
+  color: #F0145A;
+  border-bottom: 2px solid #F0145A;
 }
 .header__contacts__nav a:active {
   color: #F0145A;

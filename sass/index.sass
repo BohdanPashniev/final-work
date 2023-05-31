@@ -1,4 +1,5 @@
 @import url(header.css)
+@import url(footer.css)
 @import url(myFrameworks.css)
 $main_regular: #323264
 $main_alt: #46466E
@@ -49,7 +50,9 @@ html
     font-family: 'Montserrat', sans-serif
     font-size: 16px
     scroll-behavior: smooth
-    
+.lock
+    @media screen and ( max-width: 425px )
+        overflow: hidden
 
 .top_section
     @include gradient_supersoft
@@ -75,6 +78,7 @@ html
         width: calc( 100% - 40px )
         border-radius: 0px 0px 12px 12px
     .symbol
+        background: no-repeat center url("..img/symbol.png")
         position: absolute
         left: calc(50% - 872.34px/2 + 0.17px)
         top: -114px
@@ -83,14 +87,13 @@ html
             left: calc(50% - 294.98px - 0.02px)
             top: calc(50% - 132px)
         @media screen and ( max-width: 768px )
-            left: calc(50% - 420.98px - 0.02px)
-            top: calc(50% - 222px)
+            left: calc(50% - 336.98px - 0.02px)
+            top: calc(50% - 245px)
         svg
             @media screen and ( max-width: 1024px )
                 width: 669.96px
                 height: 768px
             @media screen and ( max-width: 768px )
-                width: 100%
                 height: 1024px
         p
             position: absolute
@@ -135,7 +138,6 @@ html
     @media screen and ( max-width: 1024px )
         padding-top: 730px
     @media screen and ( max-width: 768px )
-        padding: 850px 30px 60px 30px
         display: block
         max-width: 648px
         margin: 0 auto
@@ -247,7 +249,7 @@ html
             @media screen and ( max-width: 1024px )
                 flex: 0 0 30%
             @media screen and ( max-width: 768px )
-                flex: 1 0 50%
+                flex: 0 0 45%
             a
                 display: block
                 font-weight: 700
@@ -282,6 +284,13 @@ html
         border-radius: 12px
     @media screen and ( max-width: 1024px )
         height: 528px !important
+    @media screen and ( max-width: 768px )
+        flex-direction: column
+        height: 936px !important
+        justify-content: flex-start
+        column-gap: 60px
+    h4
+        padding-bottom: 6px
     .bg-item
         flex: 0 0 25%
         min-height: 298px !important
@@ -294,6 +303,11 @@ html
             background: no-repeat url("../img/team2.png")
             height: 528px !important
             flex: 0 0 40%
+        @media screen and ( max-width: 768px )
+            background: no-repeat center url("../img/team-tablet.png")
+            width:  100%
+            height: 100% !important
+            flex: 0 0 53%
     .item-desc
         flex: 0 2 auto
         background: $grey_bg
@@ -304,6 +318,8 @@ html
             height: 344px !important
         @media screen and ( max-width: 1024px )
             height: 528px !important
+        @media screen and ( max-width: 1024px )
+            height: 436px !important
         
     .desc-link
         display: flex
@@ -466,6 +482,8 @@ html
         align-items: flex-start
         padding: 0px
         gap: 30px
+        @media screen and ( max-width: 768px )
+            flex-wrap: wrap
     &__item
         width: 513px
         background: #FFF
@@ -478,6 +496,10 @@ html
         @media screen and ( max-width: 1025px )
             width: 281.33px
             height: 556px
+        @media screen and ( max-width: 768px )
+            flex: 1 0 47%
+            height: 514px
+            
         a
             display: block
             cursor: pointer
@@ -495,11 +517,13 @@ html
             display: block
             height: 200px
         .line
-            max-width: 436.33px
+            max-width: 80%
             height: 4px
             background: #E6E6F0
             margin: 0 auto
             transition: all 0.5s
+            @media screen and ( max-width: 768px )
+                max-width: 80%
         h5
             font-weight: 700
             font-size: 16px
@@ -523,106 +547,5 @@ html
             line-height: 22px
             color: #000000
             padding: 15px 30px 30px 30px
-            
-.footer
-    background: #F5F5FA
-    padding: 30px 0 30px
-    &__line
-        max-width: 1600px
-        height: 2px
-        background: #E6E6F0
-        margin: 0 auto
-        margin-bottom: 30px
-    &__body
-        display: flex
-        justify-content: space-between
-    &__contacts
-        .frame1
-            display: flex
-            column-gap: 26px
-            align-items: center
-            p
-                font-weight: 400
-                font-size: 16px
-                line-height: 20px
-                color: #323264
-            a
-                font-weight: 700
-                font-size: 12px
-                line-height: 15px
-                letter-spacing: 1px
-                text-transform: uppercase
-                color: $active_regular
-                position: relative
-                &:hover
-                    color: $active_hover
-                &:active
-                    color: $active_active
-                &::before
-                    content: ''
-                    position: absolute
-                    width: 6px
-                    height: 6px
-                    background: #B3B3BA
-                    border-radius: 50%
-                    top: 4.5px
-                    cursor: default
-                    left: -16px
-        .frame2
-            display: flex
-            align-items: center
-            column-gap: 26px
-            padding-top: 30px
-            &__facebook
-                path
-                    transition: all 0.5s
-                &:hover
-                    path
-                        fill: $active_hover
-                        transition: all 0.5s
-                &:active
-                    path
-                        fill: $active_active
-                        transition: all 0.5s
-            &__number
-                font-weight: 700
-                font-size: 16px
-                line-height: 20px
-                text-align: right
-                color: #46466E
-                position: relative
-                &::before
-                    content: ''
-                    position: absolute
-                    width: 6px
-                    height: 6px
-                    background: #B3B3BA
-                    border-radius: 50%
-                    top: 7px
-                    cursor: default
-                    left: -15px
-                &::after
-                    content: ''
-                    position: absolute
-                    width: 6px
-                    height: 6px
-                    background: #B3B3BA
-                    border-radius: 50%
-                    top: 7px
-                    right: -16px
-                    cursor: default
-            &__mail
-                font-weight: 700
-                font-size: 16px
-                line-height: 20px
-                color: $active_regular
-                &:hover
-                    color: $active_hover
-                &:active
-                    color: $active_active
-    p
-        font-weight: 400
-        font-size: 16px
-        line-height: 20px
-        text-align: right
-        color: #B3B3BA
+
+

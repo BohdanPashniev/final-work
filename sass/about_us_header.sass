@@ -20,16 +20,24 @@ $grey_bg_separator: #E6E6F0
     cursor: default
     height: 116px
     @media screen and ( max-width: 1029px )
-        gap: 100px
+        gap: 20px
     @media screen and ( max-width: 768px )
         display: flex
         flex-direction: column
         justify-content: flex-start
         gap: 30px
+        margin-bottom: 90px
+    @media screen and ( max-width: 425px )
+        margin-bottom: 0
+        margin-top: 15px
+        flex-direction: row
+        align-items: center
     &__logo
         @media screen and ( max-width: 768px )
             padding-top: 55px
             z-index: 2
+        @media screen and ( max-width: 425px )
+            padding: 0
     &__menu
         display: none
         position: relative
@@ -38,71 +46,94 @@ $grey_bg_separator: #E6E6F0
         color: white
         z-index: 2
         padding: 7px
-        @media screen and ( max-width: 400px )
+        @media screen and ( max-width: 425px )
             display: block
         &::before
             content: ''
-            background-color: #fff
+            background-color: $main_regular
             position: absolute
             width: 18px
             height: 2px
             top: 8px
+
         &::after
             content: ''
-            background-color: #fff
+            background-color: $main_regular
             position: absolute
             width: 18px
             height: 2px
             bottom: 10px
+
         span
-            background-color: #fff
+            background-color: $main_regular
             position: absolute
             top: 45%
             width: 18px
             height: 2px
+
     &__menu-burger
+        margin: 0
+        background: #323264
+        position: absolute
         width: 100vw
         height: 100vh
-        margin: 0
-        background-color: #444
-        position: absolute
-        top: -2500%
-        right: 0
-        transition: all ease-out 0.5s
-        .active
-            transition: all ease-out 0.5s
+        top: -3290%
+        right: -30px
+        transition: all ease-out 1s
+        overflow: hidden
+        z-index: 1
         ul
+            padding: 64px 12px
             width: 100%
             height: 100%
             display: flex
             align-items: center
             flex-direction: column
             justify-content: center
+            background: #FFF
+            .close
+                top: 121px
+                right: 30px
+                position: absolute
+                color: #EC6F5D
+                z-index: 2
+                font-size: 18px
             li
                 cursor: pointer
-                width: 100vw
+                width: 100%
                 display: flex
                 justify-content: center
                 transition: all ease-in 1s
                 border: 1px solid transparent
                 padding: 10px 0
+                color: $active_regular
+                border-radius: 12px
+                background: #F5F5FA
+                margin-bottom: 15px
                 &:hover
-                    background-color: #5c5c5c
-                    border: 1px solid orange
                     transition: all ease-in 0.2s
-                    padding: 10px 0
-                    color: orange
+                &:active
+                    background: #E6E6F0
     .active
         display: block
-        top: 0%
+        width: 100vw
+        height: 100vh
+        top: -83px
+        right: -32px
+        overflow: hidden
+        background: #323264
+        z-index: 1
     &__contacts
         z-index: 2
         display: flex
         flex-direction: column
         @media screen and ( max-width: 768px )
-            padding: 0
             gap: 120px
             position: absolute
+            top: 0
+            width: 100%
+            left: 0
+        @media screen and ( max-width: 425px )
         &__body
             display: flex
             position: relative
@@ -110,6 +141,10 @@ $grey_bg_separator: #E6E6F0
             padding-bottom: 15px
             @media screen and ( max-width: 768px )
                 padding: 0
+            @media screen and ( max-width: 425px )
+                justify-content: space-around
+                background: #F5F5FA
+                padding: 12.5px 0
         .lang
             a
                 font-weight: 700
@@ -118,23 +153,25 @@ $grey_bg_separator: #E6E6F0
                 text-align: center
                 letter-spacing: 1px
                 border-radius: 8px
-                color: #FFFFFF
+                color: $grey_bg_text
                 transition: all 0.5s
                 padding: 5px 7px
                 &:hover
-                    background: rgba(255, 255, 255, 0.2)
+                    background-color: $grey_bg_text
                     border-radius: 8px
                     transition: all 0.5s
+                    color: white
                 &:active
                     background:#F0145A
                     border-radius: 8px
                     transition: all 0.5s
+                    color: white
         .header__contacts__number
             font-weight: 700
             font-size: 16px
             line-height: 20px
             text-align: right
-            color: #FFFFFF
+            color: $grey_bg_text
             position: relative
             padding-left: 18px
             padding-right: 18px
@@ -149,6 +186,8 @@ $grey_bg_separator: #E6E6F0
                 cursor: default
                 top: 7px
                 left: 6px
+                @media screen and ( max-width: 425px )
+                    content: none
             &::after
                 content: ''
                 position: absolute
@@ -159,20 +198,28 @@ $grey_bg_separator: #E6E6F0
                 border-radius: 50%
                 top: 7px
                 right: 7px
+                @media screen and ( max-width: 425px )
+                    content: none
         span
             padding: 0 6px
             svg
                 display: inline-block
                 margin-bottom: 1px
+                @media screen and ( max-width: 425px )
+                    display: none
         p
             font-weight: 400
             font-size: 16px
             line-height: 20px
             text-align: right
-            color: #FFFFFF
+            color: $grey_bg_text
             @media screen and ( max-width: 768px )
                 color: #B3B3BA
+            @media screen and ( max-width: 425px )
+                display: none
         .facebook
+            @media screen and ( max-width: 425px )
+                display: none
             a
                 path
                     transition: all 0.5s
@@ -184,7 +231,7 @@ $grey_bg_separator: #E6E6F0
             text-align: right
             @media screen and ( max-width: 768px )
                 text-align: left
-            @media screen and ( max-width: 400px )
+            @media screen and ( max-width: 425px )
                 display: none
             li
                 display: inline-block
@@ -195,10 +242,11 @@ $grey_bg_separator: #E6E6F0
                 font-size: 16px
                 line-height: 20px
                 font-weight: 700
-                color: #FFFFFF
+                color: $active_regular
                 padding-bottom: 3px
                 &:hover
-                    border-bottom: 2px solid white
+                    color: $accent
+                    border-bottom: 2px solid $accent
                 &:active
                     color: $accent
                     border-bottom: 2px solid $accent 

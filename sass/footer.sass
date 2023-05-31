@@ -1,0 +1,164 @@
+$main_regular: #323264
+$main_alt: #46466E
+$main_soft: #686887
+$accent: #F0145A
+$active_regular: #24A3FF
+$active_hover: #0085FF
+$active_active: #006CCF
+$grey_bg: #F5F5FA
+$grey_bg_alt: #EDEDF7
+$grey_bg_text: #B3B3BA
+$grey_bg_separator: #E6E6F0
+@mixin h2_reg
+    font-size: 30px
+    font-weight: 700
+    line-height: 37px
+    letter-spacing: 0em
+    text-align: left
+
+@mixin gradient_regular
+    background: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%)
+@mixin gradien_soft
+    background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%)
+@mixin gradient_red
+    background: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%)
+@mixin gradient_supersoft
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%)
+@mixin gradient_redtext
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+.footer
+    background: #F5F5FA
+    padding: 30px 0 30px
+    &__line
+        max-width: 1600px
+        height: 2px
+        background: #E6E6F0
+        margin: 0 auto
+        margin-bottom: 30px
+    &__body
+        display: flex
+        justify-content: space-between
+        @media screen and ( max-width: 768px )
+            justify-content: flex-start
+        @media screen and ( max-width: 425px )
+            flex-wrap: wrap
+            flex-direction: column
+            row-gap: 30px
+    &__contacts
+        .frame1
+            display: flex
+            column-gap: 26px
+            align-items: center
+            @media screen and ( max-width: 425px )
+                flex-direction: column
+                row-gap: 10px
+            p
+                font-weight: 400
+                font-size: 16px
+                line-height: 20px
+                color: #323264
+            a
+                font-weight: 700
+                font-size: 12px
+                line-height: 15px
+                letter-spacing: 1px
+                text-transform: uppercase
+                color: $active_regular
+                position: relative
+                &:hover
+                    color: $active_hover
+                &:active
+                    color: $active_active
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 6px
+                    height: 6px
+                    background: #B3B3BA
+                    border-radius: 50%
+                    top: 4.5px
+                    cursor: default
+                    left: -16px
+                    @media screen and ( max-width: 425px )
+                        content: none
+        .frame2
+            display: flex
+            align-items: center
+            column-gap: 26px
+            padding-top: 30px
+            white-space: nowrap
+            @media screen and ( max-width: 425px )
+                flex-direction: column
+                row-gap: 10px
+                padding-top: 21px
+            &__facebook
+                path
+                    transition: all 0.5s
+                &:hover
+                    path
+                        fill: $active_hover
+                        transition: all 0.5s
+                &:active
+                    path
+                        fill: $active_active
+                        transition: all 0.5s
+            &__number
+                font-weight: 700
+                font-size: 16px
+                line-height: 20px
+                text-align: right
+                color: #46466E
+                position: relative
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 6px
+                    height: 6px
+                    background: #B3B3BA
+                    border-radius: 50%
+                    top: 7px
+                    cursor: default
+                    left: -15px
+                    @media screen and ( max-width: 425px )
+                        content: none
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 6px
+                    height: 6px
+                    background: #B3B3BA
+                    border-radius: 50%
+                    top: 7px
+                    right: -16px
+                    cursor: default
+                    @media screen and ( max-width: 425px )
+                        content: none
+            &__mail
+                font-weight: 700
+                font-size: 16px
+                line-height: 20px
+                color: $active_regular
+                &:hover
+                    color: $active_hover
+                &:active
+                    color: $active_active
+    .copyright
+        @media screen and ( max-width: 768px )
+            width: 100%
+            margin-left: -87px
+        @media screen and ( max-width: 425px )
+            margin-left: 0
+            text-align: center
+        p
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            text-align: left
+            color: #B3B3BA
+            white-space: nowrap
+            @media screen and ( max-width: 425px )
+                text-align: center

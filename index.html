@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,7 +103,7 @@
                         <div class="header__contacts__nav">
                             <nav>
                                 <ul>
-                                    <li><a href="">about us</a></li>
+                                    <li><a href="about us.html">about us</a></li>
                                     <li><a href="">services</a></li>
                                     <li><a href="">team</a></li>
                                     <li><a href="">publications</a></li>
@@ -112,6 +111,16 @@
                                 </ul>
                             </nav>
                         </div>
+                        <a href="#" id="menu" class="header__menu"><span></span></a>
+                        <nav class="header__menu-burger">
+                            <ul>
+                                <li><a href="">about us</a></li>
+                                <li><a href="">services</a></li>
+                                <li><a href="">team</a></li>
+                                <li><a href="">publications</a></li>
+                                <li><a href="">contact</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </header>
             </div>
@@ -154,38 +163,40 @@
                 </a>
             </div>
             <section class="experience">
-                <div class="experience__list" id="scroll">
-                    <nav class="experience__items">
-                        <a href="#tab_01" class="experience__item">Consistent</a>
-                        <a href="#tab_02" class="experience__item">Customer oriented</a>
-                        <a href="#tab_03" class="experience__item">Innovative</a>
-                        <a href="#tab_04" class="experience__item">Business oriented</a>
-                    </nav>
-                </div>
-                <div class="experience__desc">
-                    <div id="tab_01" class="experience__blocks active">
-                        <h2>1We turn the idea of legal services</h2>
-                        <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
-                            projects and achieve a number of important decisions for the industry. Many of them form the
-                            practice of applying the law of the sea in Ukraine.</p>
+                <div class="container">
+                    <div class="experience__list" id="scroll">
+                        <nav class="experience__items">
+                            <a href="#tab_01" class="experience__item">Consistent</a>
+                            <a href="#tab_02" class="experience__item">Customer oriented</a>
+                            <a href="#tab_03" class="experience__item">Innovative</a>
+                            <a href="#tab_04" class="experience__item">Business oriented</a>
+                        </nav>
                     </div>
-                    <div id="tab_02" class="experience__blocks">
-                        <h2>2We turn the idea of legal services</h2>
-                        <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
-                            projects and achieve a number of important decisions for the industry. Many of them form the
-                            practice of applying the law of the sea in Ukraine.</p>
-                    </div>
-                    <div id="tab_03" class="experience__blocks">
-                        <h2>3We turn the idea of legal services</h2>
-                        <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
-                            projects and achieve a number of important decisions for the industry. Many of them form the
-                            practice of applying the law of the sea in Ukraine.</p>
-                    </div>
-                    <div id="tab_04" class="experience__blocks">
-                        <h2>4We turn the idea of legal services</h2>
-                        <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
-                            projects and achieve a number of important decisions for the industry. Many of them form the
-                            practice of applying the law of the sea in Ukraine.</p>
+                    <div class="experience__desc">
+                        <div id="tab_01" class="experience__blocks active">
+                            <h2>1We turn the idea of legal services</h2>
+                            <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
+                                projects and achieve a number of important decisions for the industry. Many of them form the
+                                practice of applying the law of the sea in Ukraine.</p>
+                        </div>
+                        <div id="tab_02" class="experience__blocks">
+                            <h2>2We turn the idea of legal services</h2>
+                            <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
+                                projects and achieve a number of important decisions for the industry. Many of them form the
+                                practice of applying the law of the sea in Ukraine.</p>
+                        </div>
+                        <div id="tab_03" class="experience__blocks">
+                            <h2>3We turn the idea of legal services</h2>
+                            <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
+                                projects and achieve a number of important decisions for the industry. Many of them form the
+                                practice of applying the law of the sea in Ukraine.</p>
+                        </div>
+                        <div id="tab_04" class="experience__blocks">
+                            <h2>4We turn the idea of legal services</h2>
+                            <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
+                                projects and achieve a number of important decisions for the industry. Many of them form the
+                                practice of applying the law of the sea in Ukraine.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -395,7 +406,7 @@
                     <div class="publications__item">
                         <a href="">
                             <picture>
-                                <source media="(max-width: 1440px)" srcset="img/pub3(1440).png">
+                                <source media="(max-width: 768px)" srcset="img/publication-tablet.png">
                                 <source media="(max-width: 1024px)" srcset="img/pub3(1024).png">
                                 <img src="img/pub3.png" alt="3">
                             </picture>
@@ -432,19 +443,19 @@
                             <a href="mailto:contact@forstudy.space" class="frame2__mail">contact@forstudy.space</a>
                         </div>
                     </div>
-                    <p>© 2021 HLEGAL Law company, LLC</p>
+                    <div class="copyright"><p>© 2021 HLEGAL Law company, LLC</p></div>
                 </div>
             </div>
         </footer>
     </main>
-    <!-- <script>
-    $(document).ready(function(){
+    <script>
+        $(document).ready(function(){
             $('#menu').on('click',function(){
                 $('.header__menu-burger').toggleClass('active');
                 $('body').toggleClass('lock');
-            });
+            })
         });
-</script> -->
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {

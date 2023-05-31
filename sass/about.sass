@@ -1,0 +1,218 @@
+
+@import url(myFrameworks.css)
+@import url(footer.css)
+@import url(about_us_header.css)
+$main_regular: #323264
+$main_alt: #46466E
+$main_soft: #686887
+$accent: #F0145A
+$active_regular: #24A3FF
+$active_hover: #0085FF
+$active_active: #006CCF
+$grey_bg: #F5F5FA
+$grey_bg_alt: #EDEDF7
+$grey_bg_text: #B3B3BA
+$grey_bg_separator: #E6E6F0
+@mixin h2_reg
+    font-size: 30px
+    font-weight: 700
+    line-height: 37px
+    letter-spacing: 0em
+    text-align: left
+
+@mixin gradient_regular
+    background: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%)
+@mixin gradien_soft
+    background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%)
+@mixin gradient_red
+    background: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%)
+@mixin gradient_supersoft
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%)
+@mixin gradient_redtext
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+
+.container
+    max-width: 1600px
+    padding: 0 15px
+    margin: 0 auto
+    @media screen and ( max-width: 1440px )
+        max-width: 1320px
+    @media screen and ( max-width: 1024px )
+        max-width: 904px
+        padding: 0 30px
+        margin: auto
+    @media screen and ( max-width: 768px )
+        max-width: 648px
+        padding: 0 30px
+        margin: auto
+// *
+//     border: 1px solid
+html
+    font-family: 'Montserrat', sans-serif
+    font-size: 16px
+    scroll-behavior: smooth
+.lock
+    @media screen and ( max-width: 425px )
+        overflow: hidden
+.services
+    max-width: 1360px
+    margin: auto
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    column-gap: 30px
+    padding: 60px 10px 60px 10px
+    @media screen and (max-width: 1024px)
+        max-width: 904px
+        padding: 60px 30px 60px 30px
+        margin: auto
+    @media screen and ( max-width: 768px )
+        max-width: 648px
+        flex-wrap: wrap
+        row-gap: 30px
+    &__body
+        flex: 0 1 70%
+        @media screen and (max-width: 1024px)
+            flex: 0 1 60%
+        @media screen and ( max-width: 768px )
+            flex: 1 0 100%
+        h2
+            font-weight: 700
+            font-size: 38px
+            line-height: 46px
+            @include gradient_redtext
+            padding-bottom: 28px
+        p
+            font-weight: 400
+            font-size: 19px
+            line-height: 30px
+            color: #000000
+    &__advantages
+        flex: 1 0 25%
+        border-left: 4px solid #E6E6F0
+        padding-left: 30px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 40px
+        @media screen and (max-width: 1024px)
+            flex: 0 1 40%
+        @media screen and ( max-width: 768px )
+            flex: 1 0 100%
+    &__item
+        padding-bottom: 10px
+        span
+            font-weight: 700
+            font-size: 36px
+            line-height: 44px
+            text-align: center
+            @include gradient_redtext
+.photo
+    position: relative
+    padding-bottom: 60px
+    width: 100%
+    height: 100%
+    &__body
+        img
+            display: block
+            width: 100%
+            height: auto
+        span
+            position: absolute
+            top: 45%
+            left: 55%
+            transform: translate(-50%, -50%)
+            font-weight: 700
+            font-size: 96px
+            line-height: 117px
+            letter-spacing: 63px
+            text-transform: uppercase
+            color: #FFFFFF
+            opacity: 0.8
+            text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8)
+            cursor: default
+            @media screen and ( max-width: 768px )
+                font-size: 46px
+                line-height: 56px
+.more
+    &__body
+        max-width: 1360px
+        margin: auto
+        display: flex
+        column-gap: 30px
+        padding: 0 10px 60px 10px
+        @media screen and (max-width: 1024px)
+            max-width: 904px
+            padding: 0 30px 60px 30px
+            margin: auto
+        @media screen and ( max-width: 768px )
+            max-width: 648px
+            flex-wrap: wrap
+            row-gap: 30px
+    &__desc
+        flex: 0 1 70%
+        @media screen and ( max-width: 768px )
+            flex: 1 0 100%
+        p
+            font-weight: 400
+            font-size: 19px
+            line-height: 30px
+            color: #000000
+        &-right
+            flex: 1 1 25%
+            @media screen and ( max-width: 768px )
+                flex: 1 0 100%
+            h2
+                font-weight: 700
+                font-size: 38px
+                line-height: 46px
+                @include gradient_redtext
+.achievment
+    background: $grey_bg
+    padding: 30px 0
+    position: relative
+    h3
+        font-weight: 700
+        font-size: 14px
+        line-height: 17px
+        text-align: center
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #323264
+        padding-bottom: 30px
+    .swiper-slide
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        column-gap: 30px
+        .item
+            flex: 0 1 25%
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: white
+            padding: 25px 0
+            img
+                display: block
+    .swiper-pagination
+        bottom: 0px !important
+        left: 0
+        width: 100%
+    .swiper-wrapper
+        padding: 40px 0
+    .swiper-pagination-bullet
+        width: 16px !important
+        height: 16px !important
+        background: $active_regular !important
+        opacity: 0.2
+        &:hover
+            opacity: 0.6
+    .swiper-pagination-bullet-active
+        background: $active_regular !important
+        opacity: 1
+
+
