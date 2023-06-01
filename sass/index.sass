@@ -50,10 +50,16 @@ html
     font-family: 'Montserrat', sans-serif
     font-size: 16px
     scroll-behavior: smooth
+    overflow-x: hidden
+.dn
+    @media screen and ( max-width: 425px )
+        display: none !important
 .lock
     @media screen and ( max-width: 425px )
         overflow: hidden
-
+.current
+    a
+        color: #FFF
 .top_section
     @include gradient_supersoft
     border-radius: 0px 0px 12px 12px
@@ -78,7 +84,6 @@ html
         width: calc( 100% - 40px )
         border-radius: 0px 0px 12px 12px
     .symbol
-        background: no-repeat center url("..img/symbol.png")
         position: absolute
         left: calc(50% - 872.34px/2 + 0.17px)
         top: -114px
@@ -88,13 +93,19 @@ html
             top: calc(50% - 132px)
         @media screen and ( max-width: 768px )
             left: calc(50% - 336.98px - 0.02px)
-            top: calc(50% - 245px)
+            top: calc(50% - 335px)
+        @media screen and ( max-width: 425px )
+            left: calc(50% - 266.98px - 0.02px)
+            top: calc(50% - 130px)
         svg
             @media screen and ( max-width: 1024px )
                 width: 669.96px
                 height: 768px
             @media screen and ( max-width: 768px )
                 height: 1024px
+            @media screen and ( max-width: 425px )
+                width: 500px 
+                height: 600px
         p
             position: absolute
             left: calc(65% - 800px/2)
@@ -107,6 +118,10 @@ html
             @media screen and ( max-width: 1024px )
                 left: calc(50% - 277px)
                 top: calc(50% - 46px/2)
+            @media screen and ( max-width: 425px )
+                left: calc(50% - 138px)
+                top: calc(50% - 66px)
+                width: 315px
     .svg
         position: relative
         a
@@ -127,6 +142,8 @@ html
                 bottom: -625px
             @media screen and ( max-width: 768px )
                 bottom: -707px
+            @media screen and ( max-width: 425px )
+                bottom: -447px
 
 .experience
     padding-top: 960px
@@ -141,6 +158,8 @@ html
         display: block
         max-width: 648px
         margin: 0 auto
+    @media screen and ( max-width: 425px )
+        padding-top: 540px
     &__list
         border-right: 2px solid rgba(255, 255, 255, 0.3)
         padding-right: 60px
@@ -239,6 +258,8 @@ html
         padding: 0px
         margin-bottom: 60px
         row-gap: 60px
+        @media screen and ( max-width: 425px )
+            row-gap: 30px
         img
             padding: 14px
             background: #FFFFFF
@@ -250,6 +271,8 @@ html
                 flex: 0 0 30%
             @media screen and ( max-width: 768px )
                 flex: 0 0 45%
+            @media screen and ( max-width: 425px )
+                flex: 1 0 100%
             a
                 display: block
                 font-weight: 700
@@ -289,6 +312,7 @@ html
         height: 936px !important
         justify-content: flex-start
         column-gap: 60px
+
     h4
         padding-bottom: 6px
     .bg-item
@@ -313,14 +337,15 @@ html
         background: $grey_bg
         padding: 20px 20px 20px 30px
         max-height: 1087px
-        height: 298px !important
+        height: 298px
         @media screen and ( max-width: 1440px )
-            height: 344px !important
+            height: 344px
         @media screen and ( max-width: 1024px )
-            height: 528px !important
-        @media screen and ( max-width: 1024px )
-            height: 436px !important
-        
+            height: 528px
+        @media screen and ( max-width: 768px )
+            height: 436px
+        @media screen and ( max-width: 425px )
+            height: 100%
     .desc-link
         display: flex
         align-items: center
@@ -344,6 +369,9 @@ html
         font-weight: 700
         font-size: 38px
         line-height: 46px
+        @media screen and ( max-width: 425px )
+            font-size: 30px
+            line-height: 36px
     h4
         font-weight: 700
         font-size: 16px
@@ -372,7 +400,8 @@ html
     padding: 30px 100px 60px 100px
     @media screen and ( max-width: 1440px )
         padding: 30px 0 60px 0
-        
+    @media screen and ( max-width: 425px )
+        padding: 30px 0 0 0
     div
         flex: 0 0 25%
         display: flex
@@ -380,7 +409,8 @@ html
         align-items: center
         @media screen and ( max-width: 901px )
             flex: 0 0 33.3333%
-
+        @media screen and ( max-width: 425px )
+            flex: 1 0 100%
         img
             display: block
     &__bg-blue

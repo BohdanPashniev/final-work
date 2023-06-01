@@ -21,7 +21,7 @@
     <div class="container">
         <header class="header">
             <div class="header__logo">
-                <a href="">
+                <a href="index.html">
                     <svg width="318" height="60" viewBox="0 0 318 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_103144_1535)">
                             <path
@@ -106,12 +106,12 @@
                 </div>
                 <div class="header__contacts__nav">
                     <nav>
-                        <ul>
-                            <li><a href="">about us</a></li>
-                            <li><a href="">services</a></li>
-                            <li><a href="">team</a></li>
-                            <li><a href="">publications</a></li>
-                            <li><a href="">contact</a></li>
+                        <ul class="navigation">
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">team</a></li>
+                            <li><a href="#">publications</a></li>
+                            <li><a href="#">contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -120,7 +120,7 @@
                     <a href="#" id="menu"><span></span></a>
                     <nav class="header__menu-burger">
                         <ul><a class="close" id="menu">&#10006;</a>
-                            <li><a href="">about us</a></li>
+                            <li><a href="about us.html">about us</a></li>
                             <li><a href="">services</a></li>
                             <li><a href="">team</a></li>
                             <li><a href="">publications</a></li>
@@ -269,4 +269,12 @@
         // },
     });
 </script>
+<script>
+    $(document).ready(function(){
+        $('ul.navigation a').each(function () {
+            if (this.href == location.href) $(this).parent().addClass('current');
+        });
+    });
+</script>
 </body>
+</html>

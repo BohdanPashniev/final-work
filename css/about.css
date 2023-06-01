@@ -38,6 +38,10 @@ html {
   }
 }
 
+.current a {
+  color: #24A3FF;
+}
+
 .services {
   max-width: 1360px;
   margin: auto;

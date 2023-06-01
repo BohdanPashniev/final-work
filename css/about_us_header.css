@@ -191,9 +191,13 @@
   .header__contacts {
     gap: 120px;
     position: absolute;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header__contacts {
+    left: 0;
     top: 0;
     width: 100%;
-    left: 0;
   }
 }
 .header__contacts__body {
