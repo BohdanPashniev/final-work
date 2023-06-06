@@ -167,6 +167,10 @@
 .header__menu-burger ul li:active {
   background: #E6E6F0;
 }
+.header__menu-burger ul li a.link-actve {
+  color: #F0145A;
+  border-bottom: 2px solid #F0145A;
+}
 .header .active {
   display: block;
   width: 100vw;
@@ -235,6 +239,11 @@
   -o-transition: all 0.5s;
   transition: all 0.5s;
   padding: 5px 7px;
+}
+.header__contacts .lang a.lang-active {
+  background: #F0145A;
+  border-radius: 8px;
+  color: white;
 }
 .header__contacts .lang a:hover {
   background-color: #B3B3BA;
@@ -365,6 +374,10 @@
   font-weight: 700;
   color: #24A3FF;
   padding-bottom: 3px;
+}
+.header__contacts__nav a.link-active {
+  color: #F0145A;
+  border-bottom: 2px solid #F0145A;
 }
 .header__contacts__nav a:hover {
   color: #F0145A;

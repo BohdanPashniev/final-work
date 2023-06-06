@@ -1,0 +1,237 @@
+@import url(services_header.css)
+@import url(footer.css)
+@import url(myFrameworks.css)
+$main_regular: #323264
+$main_alt: #46466E
+$main_soft: #686887
+$accent: #F0145A
+$active_regular: #24A3FF
+$active_hover: #0085FF
+$active_active: #006CCF
+$grey_bg: #F5F5FA
+$grey_bg_alt: #EDEDF7
+$grey_bg_text: #B3B3BA
+$grey_bg_separator: #E6E6F0
+@mixin h2_reg
+    font-size: 30px
+    font-weight: 700
+    line-height: 37px
+    letter-spacing: 0em
+    text-align: left
+
+@mixin gradient_regular
+    background: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%)
+@mixin gradien_soft
+    background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%)
+@mixin gradient_red
+    background: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%)
+@mixin gradient_supersoft
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%)
+@mixin gradient_redtext
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
+.container
+    max-width: 1630px
+    padding: 0 15px
+    margin: 0 auto
+    @media screen and ( max-width: 1440px )
+        max-width: 1320px
+    @media screen and ( max-width: 1024px )
+        max-width: 904px
+        padding: 0 30px
+        margin: auto
+    @media screen and ( max-width: 768px )
+        max-width: 648px
+        padding: 0 30px
+        margin: auto
+html
+    font-family: 'Montserrat', sans-serif
+    font-size: 16px
+    scroll-behavior: smooth
+    overflow-x: hidden
+.dn
+    @media screen and ( max-width: 425px )
+        display: none !important
+.lock
+    @media screen and ( max-width: 425px )
+        overflow: hidden
+.top_section
+    @include gradient_supersoft
+    border-radius: 0px 0px 12px 12px
+    position: relative
+    margin-bottom: 80px
+    &::before
+        content: ""
+        position: absolute
+        bottom: -10px
+        height: 10px
+        left: 10px
+        background-color: #cacadb
+        width: calc( 100% - 20px )
+        border-radius: 0px 0px 12px 12px
+    &::after
+        content: ""
+        position: absolute
+        bottom: -20px
+        height: 10px
+        left: 20px
+        background-color: #E7E7F2
+        width: calc( 100% - 40px )
+        border-radius: 0px 0px 12px 12px
+.services
+    padding-bottom: 60px
+    margin: 0 auto
+    &__link
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-start
+        padding: 60px 0 0 0
+        gap: 2px
+    h4
+        @include gradient_redtext
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        // text-fill-color: transparent
+        font-weight: 700
+        font-size: 38px
+        line-height: 46px
+        padding-bottom: 60px
+        padding-top: 10px
+    a
+        font-weight: 700
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #B3B3BA
+        &:hover
+            color: $accent
+    .row
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        padding: 0px
+        margin-bottom: 60px
+        row-gap: 60px
+        @media screen and ( max-width: 425px )
+            row-gap: 30px
+        img
+            padding: 14px
+            background: #FFFFFF
+            border-radius: 24px
+            margin-bottom: 30px
+        &__item
+            flex: 0 0 30%
+            @media screen and ( max-width: 1024px )
+                flex: 0 0 30%
+            @media screen and ( max-width: 768px )
+                flex: 0 0 45%
+            @media screen and ( max-width: 425px )
+                flex: 1 0 100%
+            a
+                display: block
+                font-weight: 700
+                font-size: 22px
+                line-height: 27px
+                color: $active_regular
+                text-align: left
+                letter-spacing: 0px
+                text-transform: none
+                &:hover
+                    color: $accent
+        p
+            padding-top: 15px
+            font-weight: 400
+            font-size: 16px
+            line-height: 26px
+            color: #FFFFFF
+.clients
+    h3
+        font-weight: 700
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #323264
+        text-align: center
+.wrapper
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    padding: 30px 100px 60px 100px
+    @media screen and ( max-width: 1440px )
+        padding: 30px 0 60px 0
+    @media screen and ( max-width: 425px )
+        padding: 30px 0 0 0
+    div
+        flex: 0 0 25%
+        display: flex
+        justify-content: center
+        align-items: center
+        @media screen and ( max-width: 901px )
+            flex: 0 0 33.3333%
+        @media screen and ( max-width: 425px )
+            flex: 1 0 100%
+        img
+            display: block
+    &__bg-blue
+        background: #1C4280
+        flex: 1 1 25%
+        height: 120px
+        border-top-left-radius: 12px
+        @media screen and ( max-width: 1440px )
+            border-top-left-radius: 0
+    &__bg-darkblue
+        background: #143646
+        flex: 1 1 25%
+        height: 120px
+    &__bg-orange
+        background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30
+        flex: 1 1 25%
+        height: 120px
+    &__bg-purple
+        background: #9E4DC3
+        flex: 1 1 25%
+        height: 120px
+        border-top-right-radius: 12px
+        @media screen and ( max-width: 1440px )
+            border-top-right-radius: 0
+    &__bg-orange2
+        flex: 1 1 25%
+        height: 120px
+        background: #FD9339
+    &__bg-grey
+        flex: 1 1 25%
+        height: 120px
+        background: #E2E2E4
+    &__bg-red
+        flex: 1 1 25%
+        height: 120px
+        background: #C71C36
+    &__bg-white
+        flex: 1 1 25%
+        height: 120px
+        background: #DCF3F9
+    &__bg-softgrey
+        flex: 1 1 25%
+        height: 120px
+        background: #EAEAEA
+        border-bottom-left-radius: 12px
+        @media screen and ( max-width: 1440px )
+            border-bottom-left-radius: 0
+    &__bg-darkpurple
+        flex: 1 1 25%
+        height: 120px
+        background: #282240
+    &__bg-darkblue2
+        flex: 1 1 25%
+        height: 120px
+        background: #1D4568
+    &__bg-black
+        flex: 1 1 25%
+        height: 120px
+        background: #000000
+        border-bottom-right-radius: 12px
+        @media screen and ( max-width: 1440px )
+            border-bottom-right-radius: 0

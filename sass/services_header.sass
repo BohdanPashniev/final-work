@@ -1,0 +1,260 @@
+$main_regular: #323264
+$main_alt: #46466E
+$main_soft: #686887
+$accent: #F0145A
+$active_regular: #24A3FF
+$active_hover: #0085FF
+$active_active: #006CCF
+$grey_bg: #F5F5FA
+$grey_bg_alt: #EDEDF7
+$grey_bg_text: #B3B3BA
+$grey_bg_separator: #E6E6F0
+
+.header
+    display: flex
+    flex-direction: row
+    padding-top: 50px
+    justify-content: space-between
+    align-items: flex-start
+    gap: 381px
+    cursor: default
+    height: 116px
+    @media screen and ( max-width: 1029px )
+        gap: 20px
+    @media screen and ( max-width: 768px )
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        gap: 30px
+        margin-bottom: 90px
+    @media screen and ( max-width: 425px )
+        margin-bottom: 0
+        flex-direction: row
+        align-items: center
+        padding-top: 70px
+        justify-content: space-between
+    &__logo
+        @media screen and ( max-width: 768px )
+            padding-top: 55px
+            z-index: 2
+        @media screen and ( max-width: 425px )
+            padding: 0
+    &__menu
+        display: none
+        position: relative
+        width: 32px
+        height: 32px
+        color: white
+        z-index: 2
+        padding: 7px
+        @media screen and ( max-width: 425px )
+            display: block
+        &::before
+            content: ''
+            background-color: #FFF
+            position: absolute
+            width: 18px
+            height: 2px
+            top: 8px
+
+        &::after
+            content: ''
+            background-color: #FFF
+            position: absolute
+            width: 18px
+            height: 2px
+            bottom: 10px
+
+        span
+            background-color: #FFF
+            position: absolute
+            top: 45%
+            width: 18px
+            height: 2px
+
+    &__menu-burger
+        margin: 0
+        background: #323264
+        position: absolute
+        width: 100vw
+        height: 100vh
+        top: -3290%
+        right: -30px
+        transition: all ease-out 1s
+        overflow: hidden
+        z-index: 1
+        ul
+            padding: 64px 12px
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            flex-direction: column
+            justify-content: center
+            background: #FFF
+            .close
+                top: 121px
+                right: 30px
+                position: absolute
+                color: #EC6F5D
+                z-index: 2
+                font-size: 18px
+            li
+                cursor: pointer
+                width: 100%
+                display: flex
+                justify-content: center
+                transition: all ease-in 1s
+                border: 1px solid transparent
+                padding: 10px 0
+                color: $active_regular
+                border-radius: 12px
+                background: #F5F5FA
+                margin-bottom: 15px
+                &:hover
+                    transition: all ease-in 0.2s
+                &:active
+                    background: #E6E6F0
+    .active
+        display: block
+        width: 100vw
+        height: 100vh
+        top: -83px
+        right: -32px
+        overflow: hidden
+        background: #323264
+        z-index: 1
+    &__contacts
+        z-index: 2
+        display: flex
+        flex-direction: column
+        @media screen and ( max-width: 768px )
+            gap: 120px
+            position: absolute
+        @media screen and ( max-width: 425px )
+            left: 0
+            top: 0
+            width: 100%
+        &__body
+            display: flex
+            position: relative
+            align-items: center
+            padding-bottom: 15px
+            @media screen and ( max-width: 768px )
+                padding: 0
+            @media screen and ( max-width: 425px )
+                justify-content: space-around
+                background: rgba(245, 245, 250, 0.2)
+                padding: 12.5px 0
+        .lang
+            a
+                font-weight: 700
+                font-size: 12px
+                line-height: 15px
+                text-align: center
+                letter-spacing: 1px
+                border-radius: 8px
+                color: #FFF
+                transition: all 0.5s
+                padding: 5px 7px
+                &.lang-active
+                    background: #F0145A
+                    border-radius: 8px
+                    color: white
+                &:hover
+                    background-color: $grey_bg_text
+                    border-radius: 8px
+                    transition: all 0.5s
+                    color: white
+                &:active
+                    background: #F0145A
+                    border-radius: 8px
+                    transition: all 0.5s
+                    color: white
+        .header__contacts__number
+            font-weight: 700
+            font-size: 16px
+            line-height: 20px
+            text-align: right
+            color: #FFF
+            position: relative
+            padding-left: 18px
+            padding-right: 18px
+
+            &::before
+                content: ''
+                position: absolute
+                width: 6px
+                height: 6px
+                background: #E6E6F0
+                border-radius: 50%
+                cursor: default
+                top: 7px
+                left: 6px
+                @media screen and ( max-width: 425px )
+                    content: none
+            &::after
+                content: ''
+                position: absolute
+                width: 6px
+                height: 6px
+                background: #E6E6F0
+                cursor: default
+                border-radius: 50%
+                top: 7px
+                right: 7px
+                @media screen and ( max-width: 425px )
+                    content: none
+        span
+            padding: 0 6px
+            svg
+                display: inline-block
+                margin-bottom: 1px
+                @media screen and ( max-width: 425px )
+                    display: none
+        p
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            text-align: right
+            color: $grey_bg_text
+            @media screen and ( max-width: 768px )
+                color: #B3B3BA
+            @media screen and ( max-width: 425px )
+                display: none
+        .facebook
+            @media screen and ( max-width: 425px )
+                display: none
+            a
+                path
+                    transition: all 0.5s
+                &:hover
+                    path
+                        fill: $accent
+                        transition: all 0.5s
+        &__nav
+            text-align: right
+            @media screen and ( max-width: 768px )
+                text-align: left
+            @media screen and ( max-width: 425px )
+                display: none
+            li
+                display: inline-block
+                margin-left: 15px
+                &:first-child
+                    margin-left: 0
+            a
+                font-size: 16px
+                line-height: 20px
+                font-weight: 700
+                color: #FFF
+                padding-bottom: 3px
+                &.link-active
+                    color: $accent
+                    border-bottom: 2px solid $accent
+                &:hover
+                    color: $accent
+                    border-bottom: 2px solid $accent
+                &:active
+                    color: $accent
+                    border-bottom: 2px solid $accent

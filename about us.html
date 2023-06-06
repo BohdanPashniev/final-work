@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="css/about.css">
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-        <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>About us</title>
 </head>
 
@@ -83,9 +81,9 @@
             <div class="header__contacts">
                 <div class="header__contacts__body">
                     <div class="lang">
-                        <a href="">УК</a>
-                        <a href="">РУ</a>
-                        <a href="">EN</a>
+                        <a href="#" onclick="changeLanguage('UK')">УК</a>
+                        <a href="#" onclick="changeLanguage('RU')">РУ</a>
+                        <a href="#" onclick="changeLanguage('EN')" class="lang-active">EN</a>
                     </div>
                     <span>
                         <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -107,8 +105,8 @@
                 <div class="header__contacts__nav">
                     <nav>
                         <ul class="navigation">
-                            <li><a href="#">about us</a></li>
-                            <li><a href="#">services</a></li>
+                            <li><a href="about us.html" class="link-active">about us</a></li>
+                            <li><a href="services.html">services</a></li>
                             <li><a href="#">team</a></li>
                             <li><a href="#">publications</a></li>
                             <li><a href="#">contact</a></li>
@@ -116,165 +114,179 @@
                     </nav>
                 </div>
             </div>
-                <div class="header__menu">
-                    <a href="#" id="menu"><span></span></a>
-                    <nav class="header__menu-burger">
-                        <ul><a class="close" id="menu">&#10006;</a>
-                            <li><a href="about us.html">about us</a></li>
-                            <li><a href="">services</a></li>
-                            <li><a href="">team</a></li>
-                            <li><a href="">publications</a></li>
-                            <li><a href="">contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="header__menu">
+                <a href="#" id="menu"><span></span></a>
+                <nav class="header__menu-burger">
+                    <ul><a class="close" id="menu">&#10006;</a>
+                        <li><a href="about us.html">about us</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="">team</a></li>
+                        <li><a href="">publications</a></li>
+                        <li><a href="">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
     </div>
-<main>
-    <section class="services">
-        <div class="services__body">
-            <h2>We turn over the idea of legal services</h2>
-            <p>
-                Consolidating many years of experience and practice, the company's lawyers accompany complex
-                projects and achieve the adoption of a number of decisions that are important for the industry.
-                Many people form the practice of applying the law of the sea in Ukraine.
-                <br>
-                <br>
-                HLEGAL is a reliable business partner, confirmed by stable cooperation with international law
-                firms, the trust of large Ukrainian and international companies, and the recognition of
-                professional ratings.
-            </p>
-        </div>
-        <div class="services__advantages">
-            <div class="services__row">
-                <div class="services__item">
-                    <img src="img/flag.png" alt="flag">
-                    <span>10+</span>
-                </div>
-                <p>years of relevant experience</p>
-            </div>
-            <div class="services__row">
-                <div class="services__item">
-                    <img src="img/bag.png" alt="flag">
-                    <span>30+</span>
-                </div>
-                <p>active clients who entrust us with their orders on a monthly basis</p>
-            </div>
-            <div class="services__row">
-                <div class="services__item">
-                    <img src="img/star.png" alt="flag">
-                    <span>500+</span>
-                </div>
-                <p>hours of pro bono work annually</p>
-            </div>
-        </div>
-    </section>
-    <section class="photo">
-        <div class="photo__body">
-            <img src="img/aboutTeam.png" alt="">
-            <span>team</span>
-        </div>
-    </section>
-    <section class="more">
-        <div class="more__body">
-            <div class="more__desc">
+    <main>
+        <section class="services">
+            <div class="services__body">
+                <h2>We turn over the idea of legal services</h2>
                 <p>
-                    The historically unchanged legal profession has begun to reformat in recent years. Clients are feeling this, but law firms are still resisting evolution. Clients need convenience, simplicity, transparent payment. Google, IBM WatsOn, Symantec Clearwell prove that the technological revolution in legal services has begun and is imminent.
+                    Consolidating many years of experience and practice, the company's lawyers accompany complex
+                    projects and achieve the adoption of a number of decisions that are important for the industry.
+                    Many people form the practice of applying the law of the sea in Ukraine.
                     <br>
                     <br>
-                    Quality is what we care about the most.
-                    <br>
-                    <br>
-                    It's simple. If you are unhappy with our work, we will refund your money. We trust our clients. And we want our clients to trust us too.
+                    HLEGAL is a reliable business partner, confirmed by stable cooperation with international law
+                    firms, the trust of large Ukrainian and international companies, and the recognition of
+                    professional ratings.
                 </p>
             </div>
-            <div class="more__desc-right">
-                <h2>Quality is what we care about the most.</h2>
+            <div class="services__advantages">
+                <div class="services__row">
+                    <div class="services__item">
+                        <img src="img/flag.png" alt="flag">
+                        <span>10+</span>
+                    </div>
+                    <p>years of relevant experience</p>
+                </div>
+                <div class="services__row">
+                    <div class="services__item">
+                        <img src="img/bag.png" alt="flag">
+                        <span>30+</span>
+                    </div>
+                    <p>active clients who entrust us with their orders on a monthly basis</p>
+                </div>
+                <div class="services__row">
+                    <div class="services__item">
+                        <img src="img/star.png" alt="flag">
+                        <span>500+</span>
+                    </div>
+                    <p>hours of pro bono work annually</p>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="achievment">
-        <h3>achievements</h3>
+        </section>
+        <section class="photo">
+            <div class="photo__body">
+                <img src="img/aboutTeam.png" alt="">
+                <span>team</span>
+            </div>
+        </section>
+        <section class="more">
+            <div class="more__body">
+                <div class="more__desc">
+                    <p>
+                        The historically unchanged legal profession has begun to reformat in recent years. Clients are
+                        feeling this, but law firms are still resisting evolution. Clients need convenience, simplicity,
+                        transparent payment. Google, IBM WatsOn, Symantec Clearwell prove that the technological
+                        revolution in legal services has begun and is imminent.
+                        <br>
+                        <br>
+                        Quality is what we care about the most.
+                        <br>
+                        <br>
+                        It's simple. If you are unhappy with our work, we will refund your money. We trust our clients.
+                        And we want our clients to trust us too.
+                    </p>
+                </div>
+                <div class="more__desc-right">
+                    <h2>Quality is what we care about the most.</h2>
+                </div>
+            </div>
+        </section>
+        <section class="achievment">
+            <h3>achievements</h3>
             <div class="swiper mySwiper container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                            <div class="item"><img src="img/Achievment-1.png" alt=""></div>
-                            <div class="item"><img src="img/Achievment-2.png" alt=""></div>
-                            <div class="item"><img src="img/Achievment-3.png" alt=""></div>
-                            <div class="item"><img src="img/Achievment-4.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-1.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-2.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-3.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-4.png" alt=""></div>
                     </div>
                     <div class="swiper-slide">
-                            <div class="item"><img src="img/Achievment-1.png" alt=""></div>
-                            <div class="item"><img src="img/Achievment-2.png" alt=""></div>
-                            <div class="item"><img src="img/Achievment-3.png" alt=""></div>
-                            <div class="item"><img src="img/Achievment-4.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-1.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-2.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-3.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-4.png" alt=""></div>
                     </div>
                     <div class="swiper-slide">
-                            <div class="item"><img src="img/Achievment-1.png" alt=""></div>
-                            <div class="item"><img src="img/Achievment-2.png" alt=""></div>
-                            <div class="item"><img src="img/Achievment-3.png" alt=""></div>
-                            <div class="item"><img src="img/Achievment-4.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-1.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-2.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-3.png" alt=""></div>
+                        <div class="item"><img src="img/Achievment-4.png" alt=""></div>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-    </section>
-</main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__line"></div>
-        <div class="footer__body">
-            <div class="footer__contacts">
-                <div class="frame1">
-                    <p>Kyiv, Mechnikova str, 14/1</p>
-                    <a href="">On map</a>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__line"></div>
+            <div class="footer__body">
+                <div class="footer__contacts">
+                    <div class="frame1">
+                        <p>Kyiv, Mechnikova str, 14/1</p>
+                        <a href="">On map</a>
+                    </div>
+                    <div class="frame2">
+                        <a href="" class="frame2__facebook">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+                                    fill="#24A3FF" />
+                            </svg>
+                        </a>
+                        <a href="tel:0800 211 927" class="frame2__number">0800 211 927</a>
+                        <a href="mailto:contact@forstudy.space" class="frame2__mail">contact@forstudy.space</a>
+                    </div>
                 </div>
-                <div class="frame2">
-                    <a href="" class="frame2__facebook">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
-                                fill="#24A3FF" />
-                        </svg>
-                    </a>
-                    <a href="tel:0800 211 927" class="frame2__number">0800 211 927</a>
-                    <a href="mailto:contact@forstudy.space" class="frame2__mail">contact@forstudy.space</a>
+                <div class="copyright">
+                    <p>© 2021 HLEGAL Law company, LLC</p>
                 </div>
             </div>
-            <div class="copyright"><p>© 2021 HLEGAL Law company, LLC</p></div>
         </div>
-    </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('#menu').on('click',function(){
-            $('.header__menu-burger').addClass('active');
-            $('body').toggleClass('lock');
-        })
-        $('.close').on('click', function(){
-            $('.header__menu-burger').removeClass('active');
-        })
-    });
-</script>
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: "true",
-        },
-        // autoplay: {
-        //     delay: 5000,
-        // },
-    });
-</script>
-<script>
-    $(document).ready(function(){
-        $('ul.navigation a').each(function () {
-            if (this.href == location.href) $(this).parent().addClass('current');
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#menu').on('click', function () {
+                $('.header__menu-burger').addClass('active');
+                $('body').toggleClass('lock');
+            })
+            $('.close').on('click', function () {
+                $('.header__menu-burger').removeClass('active');
+            })
         });
-    });
-</script>
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: "true",
+            },
+            // autoplay: {
+            //     delay: 5000,
+            // },
+        });
+    </script>
+    <script>
+        function changeLanguage(language) {
+            var langLinks = document.querySelectorAll('.lang a');
+            for (var i = 0; i < langLinks.length; i++) {
+                langLinks[i].classList.remove('lang-active');
+            }
+
+            // Добавляем класс 'lang-active' к выбранному языку
+            event.target.classList.add('lang-active');
+
+            // Здесь вы можете выполнить другие действия, связанные с изменением языка
+        }
+    </script>
+
 </body>
+
 </html>

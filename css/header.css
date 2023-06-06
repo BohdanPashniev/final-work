@@ -239,6 +239,11 @@
   transition: all 0.5s;
   padding: 5px 7px;
 }
+.header__contacts .lang a.lang-active {
+  background: #F0145A;
+  border-radius: 8px;
+  color: white;
+}
 .header__contacts .lang a:hover {
   background-color: #B3B3BA;
   border-radius: 8px;
@@ -366,7 +371,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  color: #24A3FF;
+  color: #FFF;
   padding-bottom: 3px;
 }
 .header__contacts__nav a:hover {

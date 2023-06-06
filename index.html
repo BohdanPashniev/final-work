@@ -79,9 +79,9 @@
                     <div class="header__contacts">
                         <div class="header__contacts__body">
                             <div class="lang">
-                                <a href="">УК</a>
-                                <a href="">РУ</a>
-                                <a href="">EN</a>
+                                <a href="#" onclick="changeLanguage('UK')">УК</a>
+                                <a href="#" onclick="changeLanguage('RU')">РУ</a>
+                                <a href="#" onclick="changeLanguage('EN')" class="lang-active">EN</a>
                             </div>
                             <span>
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none"
@@ -105,7 +105,7 @@
                             <nav>
                                 <ul class="navigation">
                                     <li><a href="about us.html">about us</a></li>
-                                    <li><a href="#">services</a></li>
+                                    <li><a href="services.html">services</a></li>
                                     <li><a href="#">team</a></li>
                                     <li><a href="#">publications</a></li>
                                     <li><a href="#">contact</a></li>
@@ -118,7 +118,7 @@
                         <nav class="header__menu-burger">
                             <ul><a class="close" id="menu">&#10006;</a>
                                 <li><a href="about us.html">about us</a></li>
-                                <li><a href="">services</a></li>
+                                <li><a href="services.html">services</a></li>
                                 <li><a href="">team</a></li>
                                 <li><a href="">publications</a></li>
                                 <li><a href="">contact</a></li>
@@ -169,44 +169,48 @@
                 <div class="container">
                     <div class="experience__list" id="scroll">
                         <nav class="experience__items">
-                            <a href="#tab_01" class="experience__item">Consistent</a>
+                            <a href="#tab_01" class="experience__item tabs_active">Consistent</a>
                             <a href="#tab_02" class="experience__item">Customer oriented</a>
                             <a href="#tab_03" class="experience__item">Innovative</a>
                             <a href="#tab_04" class="experience__item">Business oriented</a>
                         </nav>
-                    </div>
-                    <div class="experience__desc">
-                        <div id="tab_01" class="experience__blocks active">
-                            <h2>1We turn the idea of legal services</h2>
-                            <p>Consolidating many years of experience and practice, the company's lawyers accompany
-                                complex
-                                projects and achieve a number of important decisions for the industry. Many of them form
-                                the
-                                practice of applying the law of the sea in Ukraine.</p>
-                        </div>
-                        <div id="tab_02" class="experience__blocks">
-                            <h2>2We turn the idea of legal services</h2>
-                            <p>Consolidating many years of experience and practice, the company's lawyers accompany
-                                complex
-                                projects and achieve a number of important decisions for the industry. Many of them form
-                                the
-                                practice of applying the law of the sea in Ukraine.</p>
-                        </div>
-                        <div id="tab_03" class="experience__blocks">
-                            <h2>3We turn the idea of legal services</h2>
-                            <p>Consolidating many years of experience and practice, the company's lawyers accompany
-                                complex
-                                projects and achieve a number of important decisions for the industry. Many of them form
-                                the
-                                practice of applying the law of the sea in Ukraine.</p>
-                        </div>
-                        <div id="tab_04" class="experience__blocks">
-                            <h2>4We turn the idea of legal services</h2>
-                            <p>Consolidating many years of experience and practice, the company's lawyers accompany
-                                complex
-                                projects and achieve a number of important decisions for the industry. Many of them form
-                                the
-                                practice of applying the law of the sea in Ukraine.</p>
+                        <div class="experience__desc">
+                            <div id="tab_01" class="experience__blocks tabs_active">
+                                <h2>We turn the idea of legal services</h2>
+                                <p>Consolidating many years of experience and practice, the company's lawyers accompany
+                                    complex
+                                    projects and achieve a number of important decisions for the industry. Many of them
+                                    form
+                                    the
+                                    practice of applying the law of the sea in Ukraine.</p>
+                            </div>
+                            <div id="tab_02" class="experience__blocks">
+                                <h2>We turn the idea of legal services</h2>
+                                <p>Consolidating many years of experience and practice, the company's lawyers accompany
+                                    complex
+                                    projects and achieve a number of important decisions for the industry. Many of them
+                                    form
+                                    the
+                                    practice of applying the law of the sea in Ukraine.</p>
+                            </div>
+                            <div id="tab_03" class="experience__blocks">
+                                <h2>We turn the idea of legal services</h2>
+                                <p>Consolidating many years of experience and practice, the company's lawyers accompany
+                                    complex
+                                    projects and achieve a number of important decisions for the industry. Many of them
+                                    form
+                                    the
+                                    practice of applying the law of the sea in Ukraine.</p>
+                            </div>
+                            <div id="tab_04" class="experience__blocks">
+                                <h2>We turn the idea of legal services</h2>
+                                <p>Consolidating many years of experience and practice, the company's lawyers accompany
+                                    complex
+                                    projects and achieve a number of important decisions for the industry. Many of them
+                                    form
+                                    the
+                                    practice of applying the law of the sea in Ukraine.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -386,8 +390,9 @@
                     <div class="publications__item">
                         <a href="">
                             <picture>
+                                <source media="(max-width: 425px)" srcset="img/pub1(425).png">
+                                <source media="(max-width: 1024px)" srcset="img/pub1(1024p).png">
                                 <source media="(max-width: 1440px)" srcset="img/pub1(1440).png">
-                                <source media="(max-width: 1024px)" srcset="img/pub1(1024).png">
                                 <img src="img/pub1.png" alt="1">
                             </picture>
                             <h5>Equity associate</h5>
@@ -400,8 +405,9 @@
                     <div class="publications__item">
                         <a href="">
                             <picture>
-                                <source media="(max-width: 1440px)" srcset="img/pub2(1440).png">
+                                <source media="(max-width: 425px)" srcset="img/pub2(425).png">
                                 <source media="(max-width: 1024px)" srcset="img/pub2(1024).png">
+                                <source media="(max-width: 1440px)" srcset="img/pub2(1440).png">
                                 <img src="img/pub2.png" alt="2">
                             </picture>
                             <h5>Penalty for the Good Corporation: what will happen to Google and others for violating
@@ -417,6 +423,7 @@
                     <div class="publications__item">
                         <a href="">
                             <picture>
+                                <source media="(max-width: 425px)" srcset="img/pub3(425).png">
                                 <source media="(max-width: 768px)" srcset="img/publication-tablet.png">
                                 <source media="(max-width: 1024px)" srcset="img/pub3(1024).png">
                                 <img src="img/pub3.png" alt="3">
@@ -485,12 +492,77 @@
         });
     </script>
     <script>
-        $(document).ready(function () {
-            $('ul.navigation a').each(function () {
-                if (this.href == location.href) $(this).parent().addClass('current');
-            });
+        function changeLanguage(language) {
+            var langLinks = document.querySelectorAll('.lang a');
+            for (var i = 0; i < langLinks.length; i++) {
+                langLinks[i].classList.remove('lang-active');
+            }
+        
+            // Добавляем класс 'lang-active' к выбранному языку
+            event.target.classList.add('lang-active');
+        
+            // Здесь вы можете выполнить другие действия, связанные с изменением языка
+        }
+        </script>
+    <script>
+        const scrollbar = document.querySelector('.experience__scrollbar');
+        const thumb = document.querySelector('.experience__thumb');
+
+        let isMouseDown = false;
+        let startX;
+        let scrollLeft;
+
+        experienceItems.addEventListener('mousedown', (e) => {
+            isMouseDown = true;
+            startX = e.pageX - thumb.offsetLeft;
+            scrollLeft = experienceItems.scrollLeft;
+            experienceItems.classList.add('grabbing');
+        });
+        experienceItems.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+        });
+
+        experienceItems.addEventListener('mouseleave', () => {
+            isMouseDown = false;
+            experienceItems.classList.remove('grabbing');
+        });
+
+        experienceItems.addEventListener('mouseup', () => {
+            isMouseDown = false;
+            experienceItems.classList.remove('grabbing');
+        });
+
+        experienceItems.addEventListener('mousemove', (e) => {
+            if (!isMouseDown) return;
+            e.preventDefault();
+            const x = e.pageX - thumb.offsetLeft;
+            const walk = (x - startX) * 2;
+            experienceItems.scrollLeft = scrollLeft - walk;
+        });
+
+        experienceItems.addEventListener('scroll', () => {
+            const scrollPercentage = (experienceItems.scrollLeft / (experienceItems.scrollWidth - experienceItems.clientWidth)) * 100;
+            thumb.style.left = `${scrollPercentage}%`;
+        });
+
+        thumb.addEventListener('mousedown', (e) => {
+            e.stopPropagation();
+            isMouseDown = true;
+            startX = e.pageX - thumb.offsetLeft;
+            scrollLeft = experienceItems.scrollLeft;
+        });
+
+        thumb.addEventListener('mouseup', () => {
+            isMouseDown = false;
+        });
+
+        thumb.addEventListener('mousemove', (e) => {
+            if (!isMouseDown) return;
+            e.preventDefault();
+            const x = e.pageX - thumb.offsetLeft;
+            const walk = (x - startX) * 2;
+            experienceItems.scrollLeft = scrollLeft - walk;
         });
     </script>
 </body>
-
 </html>

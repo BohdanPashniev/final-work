@@ -29,7 +29,13 @@ $grey_bg_separator: #E6E6F0
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%)
 @mixin gradient_redtext
     background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
-
+@keyframes fade-in
+    0%
+        opacity: 0
+        transform: translateY(20px)
+    100%
+        opacity: 1
+        transform: translateY(0)
 .container
     max-width: 1630px
     padding: 0 15px
@@ -57,9 +63,6 @@ html
 .lock
     @media screen and ( max-width: 425px )
         overflow: hidden
-.current
-    a
-        color: #FFF
 .top_section
     @include gradient_supersoft
     border-radius: 0px 0px 12px 12px
@@ -141,16 +144,12 @@ html
             @media screen and ( max-width: 1024px )
                 bottom: -625px
             @media screen and ( max-width: 768px )
-                bottom: -707px
+                bottom: -517px
             @media screen and ( max-width: 425px )
                 bottom: -447px
 
 .experience
     padding-top: 960px
-    display: flex
-    align-items: center
-    justify-content: center
-    gap: 60px
     padding-bottom: 56px
     @media screen and ( max-width: 1024px )
         padding-top: 730px
@@ -158,19 +157,20 @@ html
         display: block
         max-width: 648px
         margin: 0 auto
+        padding-top: 650px
     @media screen and ( max-width: 425px )
         padding-top: 540px
     &__list
-        border-right: 2px solid rgba(255, 255, 255, 0.3)
-        padding-right: 60px
+        display: flex
+        flex-direction: row
+        column-gap: 60px
+        align-items: center
         @media screen and ( max-width: 1024px )
             flex: 0 0 40%
         @media screen and ( max-width: 768px )
-            border-right: 0
-            border-bottom: 4px solid rgba(255, 255, 255, 0.3)
-            padding-right: 0px
-            padding-bottom: 60px
-            overflow: hidden
+            flex-direction: column
+            position: relative
+            z-index: 2
         nav
             display: flex
             flex-direction: column
@@ -178,8 +178,8 @@ html
                 display: flex
                 flex-direction: row
                 column-gap: 30px
+                width: 100%
                 height: 46px
-            
             a
                 cursor: pointer
                 color: #B3B3BA
@@ -188,8 +188,9 @@ html
                 line-height: 46px
                 text-align: right
                 padding-bottom: 30px
+                white-space: nowrap
                 @media screen and ( max-width: 768px )
-                    padding-bottom: 0px
+                    padding-bottom: 60px
                     white-space: nowrap
                 &:last-of-type
                     padding-bottom: 0
@@ -201,17 +202,48 @@ html
                 &:hover
                     -webkit-text-fill-color: $accent
                     background: none
+            .tabs_active
+                @include gradient_redtext
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                background-clip: text
+    &__items
+        flex: 0 1 40%
+        border-right: 4px solid rgba(255, 255, 255, 0.3)
+        padding-right: 60px
+        @media screen and ( max-width: 768px )
+            border-right: none
+            border-bottom: 4px solid rgba(255, 255, 255, 0.3)
+            display: flex
+            overflow-x: auto
+            scrollbar-width: thin
+            scrollbar-color: transparent transparent
+            scroll-behavior: smooth
+            -webkit-overflow-scrolling: touch
+            cursor: grab
+            user-select: none
+            &::-webkit-scrollbar
+                display: none
+            .experience__items.grabbing
+                cursor: grabbing
+            .experience__items::-webkit-scrollbar
+                width: 0
+                height: 0
+                background-color: transparent
+            .experience__items::-webkit-scrollbar-thumb
+                background-color: transparent
     &__desc
-        position: relative
+        flex: 1 0 60%
         max-width: 861px
         @media screen and ( max-width: 1024px )
-            flex: 0 0 40%
+            flex: 1 0 40%
         @media screen and ( max-width: 768px )
             padding-top: 60px
         .experience__blocks
             display: none
-            &:target
-                display: block
+            animation: fade-in 0.3s ease-in-out
+        .tabs_active
+            display: block
         h2
             @include h2_reg
             color: #FFFFFF

@@ -38,10 +38,6 @@ html {
   }
 }
 
-.current a {
-  color: #24A3FF;
-}
-
 .services {
   max-width: 1360px;
   margin: auto;
@@ -308,8 +304,12 @@ html {
   background-color: white;
   padding: 25px 0;
 }
-.achievment .swiper-slide .item img {
-  display: block;
+@media screen and (max-width: 425px) {
+  .achievment .swiper-slide .item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
 }
 .achievment .swiper-pagination {
   bottom: 0px !important;
