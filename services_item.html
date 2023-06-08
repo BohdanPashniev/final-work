@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/services_item.css">
+    <title>Services-item</title>
+</head>
+
+<body>
+    <div class="top_section">
+        <div class="container">
+            <header class="header">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <picture>
+                            <img src="img/services_logo(max).png" alt="logo">
+                            <source media="(min-width: 425px)" srcset="img/services_logo(425).png">
+                        </picture>
+                    </a>
+                </div>
+                <div class="header__contacts">
+                    <div class="header__contacts__body">
+                        <div class="lang">
+                            <a href="#" onclick="changeLanguage('UK')">УК</a>
+                            <a href="#" onclick="changeLanguage('RU')">РУ</a>
+                            <a href="#" onclick="changeLanguage('EN')" class="lang-active">EN</a>
+                        </div>
+                        <span>
+                            <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3" cy="3.5" r="3" fill="#E6E6F0" />
+                            </svg>
+                        </span>
+                        <p class="header__contacts__adress">Kyiv, Mechnikova str, 14/1</p>
+                        <a href="tel:0800 211 927" class="header__contacts__number">0800 211 927</a>
+                        <div class="facebook">
+                            <a href="">
+                                <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"
+                                        fill="#B3B3BA" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__contacts__nav">
+                        <nav>
+                            <ul class="navigation">
+                                <li><a href="about us.html">about us</a></li>
+                                <li><a href="services.html" class="link-active">services</a></li>
+                                <li><a href="#">team</a></li>
+                                <li><a href="#">publications</a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header__menu">
+                    <a href="#" id="menu"><span></span></a>
+                    <nav class="header__menu-burger">
+                        <ul><a class="close" id="menu">&#10006;</a>
+                            <li><a href="about us.html">about us</a></li>
+                            <li><a href="services.html">services</a></li>
+                            <li><a href="">team</a></li>
+                            <li><a href="">publications</a></li>
+                            <li><a href="">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div class="content-box">
+            <div class="row__item">
+                <img src="img/1.png" alt="">
+                <h3>IT and e-commerce</h3>
+                <p>An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts
+                    you
+                    from doing business. But there is not much work to do to hire an in-house lawyer.<br><br>
+                    In addition, over time, the work will become the same type and uninteresting for a full-time lawyer.
+                    And
+                    we know very well how difficult it is to find a good candidate with experience in the field of
+                    information technology in Ukraine.</p>
+            </div>
+            <div class="btn-holder">
+                <button type="button" class="services-btn">
+                    <span>Free consultation</span>
+                </button>
+            </div>
+            <div class="popup">
+                <div class="popup-content">
+                    <h2>We would like to help you</h2>
+                    <form action="">
+                        <input type="text" name="Name" class="Name" placeholder="Name" required>
+                        <input type="text" name="Message" class="Message" placeholder="Message">
+                    </form>
+                    <p>How to answer you?</p>
+                    <form action="">
+                        <input type="tel" name="Phone number" class="Phone" placeholder="Phone number" required minlength="9" maxlength="13">
+                        <input type="email" name="Email" class="Email" placeholder="Email" required>
+                    </form>
+                </div>
+                <button class="close-button"></button>
+                <div class="popup-btn-holder">
+                    <button type="button" class="popup-btn">
+                        <span>Send message</span>
+                    </button>
+                </div>
+            </div>
+            <div class="main__line"></div>
+            <div class="services-area">
+                <h4>Services in this area:</h4>
+                <div class="services-area__body">
+                    <div class="services-area__item">
+                        <ul>
+                            <li>support of investment projects for the development of port infrastructure;</li>
+                            <li>certification of GTS, entering information about them in mandatory databases and
+                                registers;
+                            </li>
+                            <li>registration of permits for the construction of port terminals;</li>
+                            <li>registration of permit and other mandatory documentation required for carrying out
+                                activities in the port (emission permit, conclusion on EIA, RTC, etc.);</li>
+                        </ul>
+                    </div>
+                    <div class="services-area__item">
+                        <ul>
+                            <li>support of procedures related to the lease of state property in the port;</li>
+                            <li>support of procedures related to confirmation of the status of port operator, maritime
+                                agent, foreign sailing line;</li>
+                            <li>support of procedures related to the inclusion of the company within the port;</li>
+                            <li>appeals against actions related to the illegal imposition of services in the port by
+                                monopoly companies.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="publications">
+        <div class="container">
+            <div class="publications__link">
+                <a href="">Publications</a>
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.5 2L8 6.5L3.5 11" stroke="#24A3FF" stroke-width="2" />
+                </svg>
+            </div>
+            <h4>Recommended</h4>
+            <div class="publications__body">
+                <div class="publications__item">
+                    <a href="">
+                        <picture>
+                            <source media="(max-width: 425px)" srcset="img/pub1(425).png">
+                            <source media="(max-width: 1024px)" srcset="img/pub1(1024p).png">
+                            <source media="(max-width: 1440px)" srcset="img/pub1(1440).png">
+                            <img src="img/pub1.png" alt="1">
+                        </picture>
+                        <h5>Equity associate</h5>
+                        <span>April 22</span>
+                        <div class="line"></div>
+                        <p>I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my
+                            parents told me that if I…</p>
+                    </a>
+                </div>
+                <div class="publications__item">
+                    <a href="">
+                        <picture>
+                            <source media="(max-width: 425px)" srcset="img/pub2(425).png">
+                            <source media="(max-width: 1024px)" srcset="img/pub2(1024).png">
+                            <source media="(max-width: 1440px)" srcset="img/pub2(1440).png">
+                            <img src="img/pub2.png" alt="2">
+                        </picture>
+                        <h5>Penalty for the Good Corporation: what will happen to Google and others for violating
+                            the
+                            GDPR</h5>
+                        <span>September 29</span>
+                        <div class="line"></div>
+                        <p>And why the recovery of 50 million euros could be a fateful precedent According to
+                            Mind.ua
+                            January 21 National Commission for Data Protection.</p>
+                    </a>
+                </div>
+                <div class="publications__item">
+                    <a href="">
+                        <picture>
+                            <source media="(max-width: 425px)" srcset="img/pub3(425).png">
+                            <source media="(max-width: 768px)" srcset="img/publication-tablet.png">
+                            <source media="(max-width: 1024px)" srcset="img/pub3(1024).png">
+                            <img src="img/pub3.png" alt="3">
+                        </picture>
+                        <h5>Millennial Testament</h5>
+                        <span>August 19</span>
+                        <div class="line"></div>
+                        <p>What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A
+                            typical
+                            legacy of the Ukrainian generation X looks like this: an apartment in…</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__line"></div>
+            <div class="footer__body">
+                <div class="footer__contacts">
+                    <div class="frame1">
+                        <p>Kyiv, Mechnikova str, 14/1</p>
+                        <a href="">On map</a>
+                    </div>
+                    <div class="frame2">
+                        <a href="" class="frame2__facebook">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+                                    fill="#24A3FF" />
+                            </svg>
+                        </a>
+                        <a href="tel:0800 211 927" class="frame2__number">0800 211 927</a>
+                        <a href="mailto:contact@forstudy.space" class="frame2__mail">contact@forstudy.space</a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>© 2021 HLEGAL Law company, LLC</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.services-btn').click(function () {
+                $('.popup').addClass('active');
+            });
+
+            $('.close-button').click(function () {
+                $('.popup').removeClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
