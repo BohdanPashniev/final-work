@@ -9,7 +9,9 @@ $grey_bg: #F5F5FA
 $grey_bg_alt: #EDEDF7
 $grey_bg_text: #B3B3BA
 $grey_bg_separator: #E6E6F0
-
+.link-active
+    color: $accent
+    border-bottom: 2px solid $accent
 .header
     display: flex
     flex-direction: row
@@ -29,9 +31,10 @@ $grey_bg_separator: #E6E6F0
         margin-bottom: 90px
     @media screen and ( max-width: 425px )
         margin-bottom: 0
-        margin-top: 15px
+        margin-top: 0
         flex-direction: row
         align-items: center
+        justify-content: space-between
     &__logo
         @media screen and ( max-width: 768px )
             padding-top: 55px
@@ -115,9 +118,11 @@ $grey_bg_separator: #E6E6F0
                 &:active
                     background: #E6E6F0
                 a
-                    &.link-actve
-                        color: $accent
-                        border-bottom: 2px solid $accent
+                    font-weight: 700
+                    font-size: 24px
+                    line-height: 29px
+                    text-align: center
+                    
     .active
         display: block
         width: 100vw

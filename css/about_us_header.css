@@ -1,3 +1,8 @@
+.link-active {
+  color: #F0145A;
+  border-bottom: 2px solid #F0145A;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,7 +46,7 @@
 @media screen and (max-width: 425px) {
   .header {
     margin-bottom: 0;
-    margin-top: 15px;
+    margin-top: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -49,6 +54,9 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media screen and (max-width: 768px) {
@@ -167,9 +175,11 @@
 .header__menu-burger ul li:active {
   background: #E6E6F0;
 }
-.header__menu-burger ul li a.link-actve {
-  color: #F0145A;
-  border-bottom: 2px solid #F0145A;
+.header__menu-burger ul li a {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
 }
 .header .active {
   display: block;

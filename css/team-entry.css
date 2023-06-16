@@ -1,0 +1,262 @@
+@import url(about_us_header.css);
+@import url(footer.css);
+@import url(myFrameworks.css);
+@import url(about.css);
+.content {
+  max-width: 1360px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1440px) {
+  .content {
+    max-width: 1080px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .content {
+    max-width: 904px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content {
+    max-width: 648px;
+  }
+}
+.content__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .content__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.content__photo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 500px;
+  height: 500px;
+}
+@media screen and (max-width: 1024px) {
+  .content__photo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+    height: 375px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content__photo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    margin-bottom: 30px;
+  }
+}
+.content__photo .bg {
+  width: 100%;
+  background: url("../img/Team-5.png") center/cover;
+  height: 100%;
+  border-radius: 12px;
+}
+@media screen and (max-width: 768px) {
+  .content__photo .bg {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 300px;
+            flex: 1 0 300px;
+  }
+}
+.content__profile {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 70%;
+          flex: 1 1 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0px;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .content__profile {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .content__profile-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 10px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 768px) {
+  .content__profile-header {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 425px) {
+  .content__profile-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.content__profile-header-dn {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .content__profile-header-dn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 60%;
+            flex: 1 1 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 10px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .content__profile-header-dn {
+    display: none;
+  }
+}
+.content__profile-header-dn h1 {
+  white-space: nowrap;
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  padding-bottom: 15px;
+}
+@media screen and (max-width: 1024px) {
+  .content__profile-header-dn h1 {
+    padding-bottom: 5px;
+  }
+}
+.content__profile-header-dn p {
+  display: inline;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3B3BA;
+}
+.content__profile-header-dn a {
+  font-weight: 400;
+  position: relative;
+  font-size: 16px;
+  line-height: 20px;
+  color: #24A3FF;
+}
+.content__profile-header h1 {
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  padding-bottom: 15px;
+}
+@media screen and (max-width: 1024px) {
+  .content__profile-header h1 {
+    padding-bottom: 5px;
+  }
+}
+.content__profile-header p {
+  display: inline;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3B3BA;
+}
+.content__profile-header a {
+  font-weight: 400;
+  position: relative;
+  font-size: 16px;
+  line-height: 20px;
+  color: #24A3FF;
+  margin-left: 26px;
+}
+@media screen and (max-width: 1024px) {
+  .content__profile-header a {
+    margin-left: 0;
+  }
+}
+.content__profile-header a::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #E6E6F0;
+  border-radius: 50%;
+  cursor: default;
+  top: 7px;
+  left: -18px;
+}
+@media screen and (max-width: 1024px) {
+  .content__profile-header a::before {
+    content: none;
+  }
+}
+.content__profile-bio {
+  border-top: 4px solid #E6E6F0;
+}
+.content__profile-bio p {
+  line-height: 26px;
+  padding-top: 30px;
+}
+.content__profile-bio h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #323264;
+  padding-top: 30px;
+}

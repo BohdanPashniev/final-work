@@ -59,7 +59,7 @@ html {
 
 @media screen and (max-width: 425px) {
   .lock {
-    overflow: hidden;
+    overflow: hidden !important;
   }
 }
 
@@ -173,12 +173,18 @@ html {
           transform: translate(-50%, -50%);
   width: 650px;
   background-color: #F5F5FA;
-  padding: 20px;
+  padding: 30px 30px 0 30px;
   border-radius: 4px;
   -webkit-box-shadow: 0px 15px 80px rgba(40, 40, 86, 0.5);
           box-shadow: 0px 15px 80px rgba(40, 40, 86, 0.5);
   display: none;
   z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 375px;
+    height: 640px;
+  }
 }
 .popup.active {
   display: block;
@@ -196,6 +202,11 @@ html {
           align-items: flex-start;
   gap: 30px;
 }
+@media screen and (max-width: 768px) {
+  .popup-content {
+    gap: 15px;
+  }
+}
 .popup-content h2 {
   position: relative;
   background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
@@ -206,6 +217,12 @@ html {
   font-weight: 700;
   font-size: 38px;
   line-height: 46px;
+}
+@media screen and (max-width: 768px) {
+  .popup-content h2 {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 .popup-content p {
   font-weight: 700;
@@ -234,121 +251,151 @@ html {
 .popup-content form input:focus {
   outline: 1px solid #323264;
 }
+.popup-content form textarea {
+  resize: none;
+}
+.popup-content form textarea:focus {
+  outline: 1px solid #323264;
+}
 .popup-content form .Name::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Name::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Name:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Name::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Name::placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
+.popup-content form .Message {
+  padding: 15px 15px;
+  border-radius: 12px;
+}
 .popup-content form .Message::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Message::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Message:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Message::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Message::placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Phone::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Phone::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Phone:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Phone::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Phone::placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Email::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Email::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Email:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Email::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #B3B3BA;
 }
 .popup-content form .Email::placeholder {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
@@ -397,7 +444,7 @@ html {
   width: 32px;
   height: 32px;
   position: relative;
-  bottom: 360px;
+  bottom: 590px;
   right: -550px;
   background: transparent;
   border-radius: 8px;
@@ -405,6 +452,12 @@ html {
   -o-transition: background 0.5s;
   transition: background 0.5s;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .close-button {
+    bottom: 560px;
+    right: -290px;
+  }
 }
 .close-button:hover {
   background: #E6E6F0;
@@ -466,6 +519,14 @@ html {
   -webkit-column-gap: 60px;
      -moz-column-gap: 60px;
           column-gap: 60px;
+}
+@media screen and (max-width: 425px) {
+  .services-area__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .services-area__item {
   -webkit-box-flex: 0;

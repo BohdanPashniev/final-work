@@ -106,7 +106,7 @@
                                 <ul class="navigation">
                                     <li><a href="about us.html">about us</a></li>
                                     <li><a href="services.html">services</a></li>
-                                    <li><a href="#">team</a></li>
+                                    <li><a href="team.html">team</a></li>
                                     <li><a href="#">publications</a></li>
                                     <li><a href="#">contact</a></li>
                                 </ul>
@@ -119,7 +119,7 @@
                             <ul><a class="close" id="menu">&#10006;</a>
                                 <li><a href="about us.html">about us</a></li>
                                 <li><a href="services.html">services</a></li>
-                                <li><a href="">team</a></li>
+                                <li><a href="team.html">team</a></li>
                                 <li><a href="">publications</a></li>
                                 <li><a href="">contact</a></li>
                             </ul>
@@ -217,7 +217,7 @@
             </section>
             <section class="services container">
                 <div class="services__link">
-                    <a href="">Services</a>
+                    <a href="services.html">Services</a>
                     <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.5 2L8 6.5L3.5 11" stroke="#F0145A" stroke-width="2" />
                     </svg>
@@ -227,41 +227,41 @@
                 <div class="row">
                     <div class="row__item">
                         <img src="img/1.png" alt="">
-                        <a href="">IT and e-commerce</a>
+                        <a href="services_item.html">IT and e-commerce</a>
                         <p>An endless stream of contracts, tax issues, labor relations, corporate papers - legal work
                             distracts you from doing business. But there is not much work to do to hire an in-house
                             lawyer.</p>
                     </div>
                     <div class="row__item">
                         <img src="img/2.png" alt="">
-                        <a href="">Comprehensive daily legal support</a>
+                        <a href="services_item.html">Comprehensive daily legal support</a>
                         <p>In addition, over time, the work will become the same type and uninteresting for a full-time
                             lawyer. And we know very well how difficult it is to find a good candidate with experience
                             in the field of information technology in Ukraine.</p>
                     </div>
                     <div class="row__item">
                         <img src="img/3.png" alt="">
-                        <a href="">Structuring corporate relationships</a>
+                        <a href="services_item.html">Structuring corporate relationships</a>
                         <p>Instead of just providing legal services, we will hire a lawyer or a whole team that will fit
                             into the daily life of your company.</p>
                     </div>
                     <div class="row__item">
                         <img src="img/4.png" alt="">
-                        <a href="">Building contractual relations</a>
+                        <a href="services_item.html">Building contractual relations</a>
                         <p>Once a week, or week after month, you have your own lawyer by your side. Anyone in the
                             company can catch it at the coffee maker and just talk about current affairs instead of
                             waiting for update status.</p>
                     </div>
                     <div class="row__item">
                         <img src="img/5.png" alt="">
-                        <a href="">Protection of business, intellectual property</a>
+                        <a href="services_item.html">Protection of business, intellectual property</a>
                         <p>And all the other time he will work on new diverse projects, so he will definitely not stop
                             in professional development. One way or another, all Axon Partners will work for you instead
                             of a corporate lawyer.</p>
                     </div>
                     <div class="row__item">
                         <img src="img/6.png" alt="">
-                        <a href="">Judicial representation</a>
+                        <a href="services_item.html">Judicial representation</a>
                         <p>Is it a small, medium-sized company or a market leader? Local business or multinational
                             company? Do you have your own legal department or not?</p>
                     </div>
@@ -276,7 +276,7 @@
                             <div class="bg-item"></div>
                             <div class="item-desc">
                                 <div class="desc-link">
-                                    <a href="">команда</a>
+                                    <a href="team.html">команда</a>
                                     <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.5 2L8 6.5L3.5 11" stroke="#24A3FF" stroke-width="2" />
@@ -476,7 +476,19 @@
             })
             $('.close').on('click', function () {
                 $('.header__menu-burger').removeClass('active');
+                $('body').toggleClass('lock');
             })
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".experience__item").click(function(e) {
+                e.preventDefault();
+                $(".experience__item").removeClass("tabs_active");
+                $(this).addClass("tabs_active");
+                $(".experience__blocks").hide();
+                $($(this).attr("href")).show();
+            });
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -497,72 +509,12 @@
             for (var i = 0; i < langLinks.length; i++) {
                 langLinks[i].classList.remove('lang-active');
             }
-        
+
             // Добавляем класс 'lang-active' к выбранному языку
             event.target.classList.add('lang-active');
-        
+
             // Здесь вы можете выполнить другие действия, связанные с изменением языка
         }
-        </script>
-    <script>
-        const scrollbar = document.querySelector('.experience__scrollbar');
-        const thumb = document.querySelector('.experience__thumb');
-
-        let isMouseDown = false;
-        let startX;
-        let scrollLeft;
-
-        experienceItems.addEventListener('mousedown', (e) => {
-            isMouseDown = true;
-            startX = e.pageX - thumb.offsetLeft;
-            scrollLeft = experienceItems.scrollLeft;
-            experienceItems.classList.add('grabbing');
-        });
-        experienceItems.addEventListener('dragstart', (e) => {
-            e.preventDefault();
-        });
-
-        experienceItems.addEventListener('mouseleave', () => {
-            isMouseDown = false;
-            experienceItems.classList.remove('grabbing');
-        });
-
-        experienceItems.addEventListener('mouseup', () => {
-            isMouseDown = false;
-            experienceItems.classList.remove('grabbing');
-        });
-
-        experienceItems.addEventListener('mousemove', (e) => {
-            if (!isMouseDown) return;
-            e.preventDefault();
-            const x = e.pageX - thumb.offsetLeft;
-            const walk = (x - startX) * 2;
-            experienceItems.scrollLeft = scrollLeft - walk;
-        });
-
-        experienceItems.addEventListener('scroll', () => {
-            const scrollPercentage = (experienceItems.scrollLeft / (experienceItems.scrollWidth - experienceItems.clientWidth)) * 100;
-            thumb.style.left = `${scrollPercentage}%`;
-        });
-
-        thumb.addEventListener('mousedown', (e) => {
-            e.stopPropagation();
-            isMouseDown = true;
-            startX = e.pageX - thumb.offsetLeft;
-            scrollLeft = experienceItems.scrollLeft;
-        });
-
-        thumb.addEventListener('mouseup', () => {
-            isMouseDown = false;
-        });
-
-        thumb.addEventListener('mousemove', (e) => {
-            if (!isMouseDown) return;
-            e.preventDefault();
-            const x = e.pageX - thumb.offsetLeft;
-            const walk = (x - startX) * 2;
-            experienceItems.scrollLeft = scrollLeft - walk;
-        });
     </script>
 </body>
 </html>

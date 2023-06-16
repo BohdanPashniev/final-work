@@ -1,3 +1,8 @@
+.link-active {
+  color: #F0145A;
+  border-bottom: 2px solid #F0145A;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,7 +118,6 @@
   -webkit-transition: all ease-out 1s;
   -o-transition: all ease-out 1s;
   transition: all ease-out 1s;
-  overflow: hidden;
   z-index: 1;
 }
 .header__menu-burger ul {
@@ -170,13 +174,18 @@
 .header__menu-burger ul li:active {
   background: #E6E6F0;
 }
+.header__menu-burger ul li a {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+}
 .header .active {
   display: block;
   width: 100vw;
   height: 100vh;
-  top: -83px;
+  top: -77px;
   right: -32px;
-  overflow: hidden;
   background: #323264;
   z-index: 1;
 }

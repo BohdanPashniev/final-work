@@ -43,7 +43,8 @@ $grey_bg_separator: #E6E6F0
         display: flex
         justify-content: space-between
         @media screen and ( max-width: 768px )
-            justify-content: flex-start
+            flex-direction: column
+            align-items: center
         @media screen and ( max-width: 425px )
             flex-wrap: wrap
             flex-direction: column
@@ -91,6 +92,8 @@ $grey_bg_separator: #E6E6F0
             column-gap: 26px
             padding-top: 30px
             white-space: nowrap
+            @media screen and ( max-width: 768px )
+                padding-bottom: 30px
             @media screen and ( max-width: 425px )
                 flex-direction: column
                 row-gap: 10px
@@ -149,10 +152,8 @@ $grey_bg_separator: #E6E6F0
     .copyright
         @media screen and ( max-width: 768px )
             width: 100%
-            margin-left: -87px
         @media screen and ( max-width: 425px )
             margin-left: 0
-            text-align: center
         p
             font-weight: 400
             font-size: 16px
@@ -160,5 +161,7 @@ $grey_bg_separator: #E6E6F0
             text-align: left
             color: #B3B3BA
             white-space: nowrap
+            @media screen and ( max-width: 768px )
+                text-align: center
             @media screen and ( max-width: 425px )
                 text-align: center

@@ -1,0 +1,171 @@
+@import url(about_us_header.css)
+@import url(footer.css)
+@import url(myFrameworks.css)
+@import url(about.css)
+$main_regular: #323264
+$main_alt: #46466E
+$main_soft: #686887
+$accent: #F0145A
+$active_regular: #24A3FF
+$active_hover: #0085FF
+$active_active: #006CCF
+$grey_bg: #F5F5FA
+$grey_bg_alt: #EDEDF7
+$grey_bg_text: #B3B3BA
+$grey_bg_separator: #E6E6F0
+@mixin h2_reg
+    font-size: 30px
+    font-weight: 700
+    line-height: 37px
+    letter-spacing: 0em
+    text-align: left
+
+@mixin gradient_regular
+    background: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%)
+@mixin gradien_soft
+    background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%)
+@mixin gradient_red
+    background: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%)
+@mixin gradient_supersoft
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%)
+@mixin gradient_redtext
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+.content
+    max-width: 1360px
+    padding: 0 15px
+    margin: 0 auto
+    @media screen and ( max-width: 1440px )
+        max-width: 1080px
+    @media screen and ( max-width: 1024px )
+        max-width: 904px
+    @media screen and ( max-width: 768px )
+        max-width: 648px
+    &__body
+        display: flex
+        align-items: center
+        column-gap: 60px
+        padding-top: 60px
+        padding-bottom: 60px
+        @media screen and ( max-width: 768px )
+            flex-wrap: wrap
+    &__photo
+        align-self: flex-start
+        width: 500px
+        height: 500px
+        @media screen and ( max-width: 1024px )
+            flex: 0 0 300px
+            height: 375px
+        @media screen and ( max-width: 768px )
+            display: flex
+            flex: 1 0 100%
+            align-items: center
+            justify-content: space-between
+            column-gap: 30px
+            margin-bottom: 30px
+        .bg
+            width: 100%
+            background: url('../img/Team-5.png') center/cover
+            height: 100%
+            border-radius: 12px
+            @media screen and ( max-width: 768px )
+                flex: 1 0 300px
+    &__profile
+        flex: 1 1 70%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        padding: 0px
+        gap: 30px
+        @media screen and ( max-width: 768px )
+            flex: 1 0 100%
+        &-header
+            @media screen and ( max-width: 1024px )
+                display: flex
+                flex-direction: column
+                row-gap: 10px
+                @media screen and ( max-width: 768px )
+                    display: none
+                @media screen and ( max-width: 425px )
+                    display: flex
+            &-dn
+                display: none
+                @media screen and ( max-width: 768px )
+                    flex: 1 1 60%
+                    display: flex
+                    flex-direction: column
+                    row-gap: 10px
+                @media screen and ( max-width: 425px )
+                    display: none
+                h1
+                    white-space: nowrap
+                    @include gradient_redtext
+                    font-weight: 700
+                    font-size: 38px
+                    line-height: 46px
+                    padding-bottom: 15px
+                    @media screen and ( max-width: 1024px )
+                        padding-bottom: 5px
+                p
+                    display: inline
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 22px
+                    color: $grey_bg_text
+                a
+                    font-weight: 400
+                    position: relative
+                    font-size: 16px
+                    line-height: 20px
+                    color: $active_regular
+            h1
+                @include gradient_redtext
+                font-weight: 700
+                font-size: 38px
+                line-height: 46px
+                padding-bottom: 15px
+                @media screen and ( max-width: 1024px )
+                    padding-bottom: 5px
+            p
+                display: inline
+                font-weight: 400
+                font-size: 14px
+                line-height: 22px
+                color: $grey_bg_text
+            a
+                font-weight: 400
+                position: relative
+                font-size: 16px
+                line-height: 20px
+                color: $active_regular
+                margin-left: 26px
+                @media screen and ( max-width: 1024px )
+                    margin-left: 0
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 6px
+                    height: 6px
+                    background: #E6E6F0
+                    border-radius: 50%
+                    cursor: default
+                    top: 7px
+                    left: -18px
+                    @media screen and ( max-width: 1024px )
+                        content: none
+        &-bio
+            border-top: 4px solid #E6E6F0
+            p
+                line-height: 26px
+                padding-top: 30px
+            h3
+                font-weight: 700
+                font-size: 14px
+                line-height: 17px
+                letter-spacing: 1px
+                text-transform: uppercase
+                color: $main_regular
+                padding-top: 30px

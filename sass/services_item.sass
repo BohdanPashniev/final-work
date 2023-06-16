@@ -62,7 +62,7 @@ html
     overflow-x: hidden
 .lock
     @media screen and ( max-width: 425px )
-        overflow: hidden
+        overflow: hidden !important
 .content-box
     max-width: 1420px
     margin: 0 auto
@@ -141,11 +141,14 @@ html
     transform: translate(-50%, -50%)
     width: 650px
     background-color: $grey_bg
-    padding: 20px
+    padding: 30px 30px 0 30px
     border-radius: 4px
     box-shadow: 0px 15px 80px rgba(40, 40, 86, 0.5)
     display: none
     z-index: 2
+    @media screen and ( max-width: 768px ) 
+        width: 375px
+        height: 640px
 
     &.active
         display: block
@@ -155,12 +158,17 @@ html
         flex-direction: column
         align-items: flex-start
         gap: 30px
+        @media screen and ( max-width: 768px )
+            gap: 15px
         h2
             position: relative
             @include gradient_redtext
             font-weight: 700
             font-size: 38px
             line-height: 46px
+            @media screen and ( max-width: 768px ) 
+                font-size: 30px
+                line-height: 37px   
         p
             font-weight: 700
             font-size: 14px
@@ -179,27 +187,36 @@ html
                 border-radius: 8px
                 &:focus
                     outline: 1px solid $main_regular
+            textarea
+                resize: none
+                &:focus
+                    outline: 1px solid $main_regular
             .Name
                 &::placeholder
+                    font-family: 'Montserrat', sans-serif
                     font-weight: 400
                     font-size: 16px
                     line-height: 26px
                     color: $grey_bg_text
             .Message
-                
+                padding: 15px 15px
+                border-radius: 12px
                 &::placeholder
+                    font-family: 'Montserrat', sans-serif
                     font-weight: 400
                     font-size: 16px
                     line-height: 26px
                     color: $grey_bg_text
             .Phone
                 &::placeholder
+                    font-family: 'Montserrat', sans-serif
                     font-weight: 400
                     font-size: 16px
                     line-height: 26px
                     color: $grey_bg_text
             .Email
                 &::placeholder
+                    font-family: 'Montserrat', sans-serif
                     font-weight: 400
                     font-size: 16px
                     line-height: 26px
@@ -232,12 +249,15 @@ html
     width: 32px
     height: 32px
     position: relative
-    bottom: 360px
+    bottom: 590px
     right: -550px
     background: transparent
     border-radius: 8px
     transition: background 0.5s
     cursor: pointer
+    @media screen and ( max-width: 768px ) 
+        bottom: 560px
+        right: -290px
     &:hover
         background: $grey_bg_separator
         transition: background 0.5s
@@ -278,6 +298,8 @@ html
         flex-direction: row
         padding-bottom: 60px
         column-gap: 60px
+        @media screen and ( max-width: 425px )
+            flex-direction: column
     &__item
         flex: 0 1 50%
         ul

@@ -19,8 +19,8 @@
                 <div class="header__logo">
                     <a href="index.html">
                         <picture>
+                            <source media="(max-width: 425px)" srcset="img/services_logo(425).png">
                             <img src="img/services_logo(max).png" alt="logo">
-                            <source media="(min-width: 425px)" srcset="img/services_logo(425).png">
                         </picture>
                     </a>
                 </div>
@@ -65,7 +65,7 @@
                     <nav class="header__menu-burger">
                         <ul><a class="close" id="menu">&#10006;</a>
                             <li><a href="about us.html">about us</a></li>
-                            <li><a href="services.html">services</a></li>
+                            <li><a href="services.html" class="link-active">services</a></li>
                             <li><a href="">team</a></li>
                             <li><a href="">publications</a></li>
                             <li><a href="">contact</a></li>
@@ -96,20 +96,20 @@
                     <h2>We would like to help you</h2>
                     <form action="">
                         <input type="text" name="Name" class="Name" placeholder="Name" required>
-                        <input type="text" name="Message" class="Message" placeholder="Message">
+                        <textarea type="text" name="Message" class="Message" placeholder="Message" rows="10" ></textarea>
                     </form>
                     <p>How to answer you?</p>
                     <form action="">
                         <input type="tel" name="Phone number" class="Phone" placeholder="Phone number" required minlength="9" maxlength="13">
                         <input type="email" name="Email" class="Email" placeholder="Email" required>
                     </form>
+                    <div class="popup-btn-holder">
+                        <button type="button" class="popup-btn">
+                            <span>Send message</span>
+                        </button>
+                    </div>
                 </div>
                 <button class="close-button"></button>
-                <div class="popup-btn-holder">
-                    <button type="button" class="popup-btn">
-                        <span>Send message</span>
-                    </button>
-                </div>
             </div>
             <div class="main__line"></div>
             <div class="services-area">
@@ -240,6 +240,18 @@
             $('.close-button').click(function () {
                 $('.popup').removeClass('active');
             });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#menu').on('click', function () {
+                $('.header__menu-burger').addClass('active');
+                $('body').toggleClass('lock');
+            })
+            $('.close').on('click', function () {
+                $('.header__menu-burger').removeClass('active');
+                $('body').toggleClass('lock');
+            })
         });
     </script>
 </body>
