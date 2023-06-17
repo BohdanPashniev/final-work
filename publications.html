@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/publications.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>Publications</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__logo">
+                <a href="index.html">
+                    <picture>
+                        <source media="(max-width: 425px)" srcset="img/team_logo(min).png">
+                        <img src="img/team_logo(max).png" alt="logo">
+                    </picture>
+                </a>
+            </div>
+            <div class="header__contacts">
+                <div class="header__contacts__body">
+                    <div class="lang">
+                        <a href="#" onclick="changeLanguage('UK')">УК</a>
+                        <a href="#" onclick="changeLanguage('RU')">РУ</a>
+                        <a href="#" onclick="changeLanguage('EN')" class="lang-active">EN</a>
+                    </div>
+                    <span>
+                        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="3" cy="3.5" r="3" fill="#E6E6F0" />
+                        </svg>
+                    </span>
+                    <p class="header__contacts__adress">Kyiv, Mechnikova str, 14/1</p>
+                    <a href="tel:0800 211 927" class="header__contacts__number">0800 211 927</a>
+                    <div class="facebook">
+                        <a href="">
+                            <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"
+                                    fill="#B3B3BA" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__contacts__nav">
+                    <nav>
+                        <ul class="navigation">
+                            <li><a href="about us.html">about us</a></li>
+                            <li><a href="services.html">services</a></li>
+                            <li><a href="team.html">team</a></li>
+                            <li><a href="publications.html" class="link-active">publications</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header__menu">
+                <a href="#" id="menu"><span></span></a>
+                <nav class="header__menu-burger">
+                    <ul><a class="close" id="menu">&#10006;</a>
+                        <li><a href="about us.html">about us</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="team.html">team</a></li>
+                        <li><a href="publications.html" class="link-active">publications</a></li>
+                        <li><a href="">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <main>
+        <div class="publications">
+            <div class="container">
+                <div class="wrap">
+                    <div class="wrap__holder">
+                        <label for="radioBtn1">
+                            <input id="radioBtn1" type="radio" name="radioBtn" checked>
+                            <div class="bg"></div>
+                            <span class="label">news</span>
+                        </label>
+                        <label for="radioBtn2">
+                            <input id="radioBtn2" type="radio" name="radioBtn">
+                            <div class="bg"></div>
+                            <span class="label">articles</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="publications__body">
+                    <div class="publications__body-item">
+                        <a href="">
+                            <div class="publication__body-item-bg1"></div>
+                            <div class="publication__body-item-desc">
+                                <h5>Equity associate</h5>
+                                <span>April 22</span>
+                                <div class="line"></div>
+                                <p>I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before
+                                    entering my
+                                    parents told me that if I…
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="publications__body-item">
+                        <a href="">
+                            <div class="publication__body-item-bg2"></div>
+                            <div class="publication__body-item-desc">
+                                <h5>Penalty for the Good Corporation: what will happen to Google and others for
+                                    violating
+                                    the
+                                    GDPR</h5>
+                                <span>September 29</span>
+                                <div class="line"></div>
+                                <p>And why the recovery of 50 million euros could be a fateful precedent According to
+                                    Mind.ua
+                                    January 21 National Commission for Data Protection.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="publications__body-item">
+                        <a href="">
+                            <div class="publication__body-item-bg3"></div>
+                            <div class="publication__body-item-desc">
+                                <h5>Millennial Testament</h5>
+                                <span>August 19</span>
+                                <div class="line"></div>
+                                <p>What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A
+                                    typical
+                                    legacy of the Ukrainian generation X looks like this: an apartment in…</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="publications__body-item">
+                        <a href="">
+                            <div class="publication__body-item-bg4"></div>
+                            <div class="publication__body-item-desc">
+                                <h5>Language Law: How to Make Your Website Relevant</h5>
+                                <span>August 19</span>
+                                <div class="line"></div>
+                                <p>Natalia Kyryk, head of content studio Wordfactory.ua First, it's beautiful! This is
+                                    the number one argument in favor of the Ukrainian-language site. Secondly, it is
+                                    effective. IN…</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="publications__body-item">
+                        <a href="">
+                            <div class="publication__body-item-bg5"></div>
+                            <div class="publication__body-item-desc">
+                                <h5>Reimbursement of the child's tuition fees in kindergarten and school</h5>
+                                <span>February 5, 2018</span>
+                                <div class="line"></div>
+                                <p>What we are talking about In June this year, the Verkhovna Rada amended the Tax Code
+                                    of Ukraine. From now on, parents who receive an official…</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="publications__body-item">
+                        <a href="">
+                            <!-- <div class="publication__body-item-bg6"></div> -->
+                            <div class="publication__body-item-desc">
+                                <h5>Currency control is dead, long live currency control!</h5>
+                                <span>June 14, 2018</span>
+                                <div class="line"></div>
+                                <p>Experts hold conferences, round tables and other events on "liberalization of
+                                    currency legislation." Lawyers-experts-novelists rub their fingers about "ctrl + c /
+                                    ctrl + v".</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="publications__body-btn">
+                    <button type="button"><a href="">More publications</a></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__line"></div>
+            <div class="footer__body">
+                <div class="footer__contacts">
+                    <div class="frame1">
+                        <p>Kyiv, Mechnikova str, 14/1</p>
+                        <a href="">On map</a>
+                    </div>
+                    <div class="frame2">
+                        <a href="" class="frame2__facebook">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+                                    fill="#24A3FF" />
+                            </svg>
+                        </a>
+                        <a href="tel:0800 211 927" class="frame2__number">0800 211 927</a>
+                        <a href="mailto:contact@forstudy.space" class="frame2__mail">contact@forstudy.space</a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>© 2021 HLEGAL Law company, LLC</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    $(document).ready(function () {
+        $('#menu').on('click', function () {
+            $('.header__menu-burger').addClass('active');
+            $('body').toggleClass('lock');
+        })
+        $('.close').on('click', function () {
+            $('.header__menu-burger').removeClass('active');
+            $('body').toggleClass('lock');
+        })
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        // При загрузке страницы устанавливаем начальное состояние
+        $('.wrap__holder label:first-child .bg').width('100%');
+        $('.wrap__holder label:first-child').addClass('active');
+
+        // Обработчик события при нажатии на label
+        $('.wrap__holder label').click(function () {
+            const currentIndex = $(this).index();
+            const bg = $(this).find('.bg');
+
+            // Установка активного состояния
+            $('.wrap__holder label').removeClass('active');
+            $(this).addClass('active');
+
+            // Анимация перехода фона
+            $('.wrap__holder label .bg').width(0);
+            bg.width('100%');
+
+            // Переключение радио-кнопки
+            const radioBtn = $(this).find('input[type="radio"]');
+            radioBtn.prop('checked', true);
+        });
+    });
+</script>
+
+</html>

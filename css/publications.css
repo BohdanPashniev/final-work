@@ -1,0 +1,270 @@
+@import url(myFrameworks.css);
+@import url(footer.css);
+@import url(about_us_header.css);
+.container {
+  max-width: 1600px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 904px;
+    padding: 0 30px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 648px;
+    padding: 0 30px;
+    margin: auto;
+  }
+}
+.container .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+.container .wrap__holder {
+  background-color: #E6E6F0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+.container .wrap__holder label {
+  position: relative;
+  display: block;
+  height: 50px;
+  cursor: pointer;
+}
+.container .wrap__holder label:nth-child(1) .bg {
+  right: 0;
+  left: auto;
+}
+.container .wrap__holder label:nth-child(2) .bg {
+  left: 0;
+}
+.container .wrap__holder label [type=radio] {
+  display: none;
+  z-index: 5;
+  position: relative;
+}
+.container .wrap__holder label [type=radio]:checked .bg {
+  width: 100%;
+  border-radius: 12px;
+}
+.container .wrap__holder label span {
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 25px;
+  z-index: 5;
+  position: relative;
+}
+.container .wrap__holder label span:first-child {
+  background-color: #FFF;
+  width: 100%;
+  border-radius: 12px;
+}
+.container .wrap__holder label .bg {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: #FFF;
+  top: 0;
+  z-index: 0;
+  border-radius: 12px;
+  left: 0;
+  -webkit-transition: 0.3s width;
+  -o-transition: 0.3s width;
+  transition: 0.3s width;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 425px) {
+  .lock {
+    overflow: hidden;
+  }
+}
+
+.publications {
+  padding: 60px 0 0 0;
+  margin: 60px 0 0 0;
+  background-color: #F5F5FA;
+}
+.publications__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+.publications__body-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+  background-color: #FFF;
+  border-radius: 8px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.publications__body-item:hover {
+  background-color: #E6E6F0;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.publications__body-item:hover .publication__body-item-desc h5 {
+  color: #F0145A;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.publications__body-item:hover .publication__body-item-desc .line {
+  background: white;
+}
+.publications__body-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+.publications__body-item a .publication__body-item-bg1 {
+  background: url("../img/Publication-1.png") center/cover;
+  height: 200px;
+  border-radius: 8px 8px 0px 0px;
+}
+.publications__body-item a .publication__body-item-bg2 {
+  background: url("../img/Publication-2.png") center/cover;
+  height: 200px;
+  border-radius: 8px 8px 0px 0px;
+}
+.publications__body-item a .publication__body-item-bg3 {
+  background: url("../img/Publication-3.png") center/cover;
+  height: 200px;
+  border-radius: 8px 8px 0px 0px;
+}
+.publications__body-item a .publication__body-item-bg4 {
+  background: url("../img/Publication-4.png") center/cover;
+  height: 200px;
+  border-radius: 8px 8px 0px 0px;
+}
+.publications__body-item a .publication__body-item-bg5 {
+  background: url("../img/Publication-5.png") center/cover;
+  height: 200px;
+  border-radius: 8px 8px 0px 0px;
+}
+.publications__body-item a .publication__body-item-bg6 {
+  background: url("../img/Publication-6.png") center/cover;
+  height: 200px;
+  border-radius: 8px 8px 0px 0px;
+}
+.publications__body-item a .publication__body-item-desc {
+  padding: 0 30px 42px 30px;
+}
+.publications__body-item a .publication__body-item-desc h5 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #24A3FF;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 30px 0 15px 0;
+}
+.publications__body-item a .publication__body-item-desc span {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #B3B3BA;
+}
+.publications__body-item a .publication__body-item-desc .line {
+  max-width: 100%;
+  height: 4px;
+  background: #E6E6F0;
+  margin: 15px 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .publications__body-item a .publication__body-item-desc .line {
+    max-width: 80%;
+  }
+}
+.publications__body-item a .publication__body-item-desc p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+}
+.publications__body-btn {
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.publications__body-btn button {
+  background: #24A3FF;
+  -webkit-box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  padding: 18px 30px;
+  cursor: pointer;
+}
+.publications__body-btn button:hover {
+  background: #0085FF;
+}
+.publications__body-btn button a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}

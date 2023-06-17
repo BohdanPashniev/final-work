@@ -1,0 +1,214 @@
+@import url(myFrameworks.css)
+@import url(footer.css)
+@import url(about_us_header.css)
+$main_regular: #323264
+$main_alt: #46466E
+$main_soft: #686887
+$accent: #F0145A
+$active_regular: #24A3FF
+$active_hover: #0085FF
+$active_active: #006CCF
+$grey_bg: #F5F5FA
+$grey_bg_alt: #EDEDF7
+$grey_bg_text: #B3B3BA
+$grey_bg_separator: #E6E6F0
+@mixin h2_reg
+    font-size: 30px
+    font-weight: 700
+    line-height: 37px
+    letter-spacing: 0em
+    text-align: left
+
+@mixin gradient_regular
+    background: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%)
+@mixin gradien_soft
+    background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%)
+@mixin gradient_red
+    background: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%)
+@mixin gradient_supersoft
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%)
+@mixin gradient_redtext
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+.container
+    max-width: 1600px
+    padding: 0 15px
+    margin: 0 auto
+    @media screen and ( max-width: 1440px )
+        max-width: 1320px
+    @media screen and ( max-width: 1024px )
+        max-width: 904px
+        padding: 0 30px
+        margin: auto
+    @media screen and ( max-width: 768px )
+        max-width: 648px
+        padding: 0 30px
+        margin: auto
+    .wrap
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow: hidden
+        padding-bottom: 30px
+        &__holder
+            background-color: #E6E6F0
+            display: flex
+            border: 1px solid #ddd
+            border-radius: 12px
+            label
+                &:nth-child(1)
+                    .bg
+                        right: 0
+                        left: auto  
+                &:nth-child(2)
+                    .bg
+                        left: 0
+                position: relative
+                display: block
+                height: 50px
+                cursor: pointer
+                [type="radio"]
+                    &:checked
+                        .bg
+                            width: 100%
+                            border-radius: 12px
+                    display: none
+                    z-index: 5
+                    position: relative
+                span
+                    transition: background .3s
+                    height: 100%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    padding: 0 25px
+                    z-index: 5
+                    position: relative
+                    &:first-child
+                        background-color: #FFF
+                        width: 100%
+                        border-radius: 12px
+                .bg
+                    position: absolute
+                    width: 0
+                    height: 100%
+                    background: #FFF
+                    top: 0
+                    z-index: 0
+                    border-radius: 12px
+                    left: 0
+                    transition: .3s width
+// *
+//     border: 1px solid
+html
+    font-family: 'Montserrat', sans-serif
+    font-size: 16px
+    scroll-behavior: smooth
+.lock
+    @media screen and ( max-width: 425px )
+        overflow: hidden
+
+.publications
+    padding: 60px 0 0 0
+    margin: 60px 0 0 0
+    background-color: $grey_bg
+    &__body
+        display: flex
+        flex-wrap: wrap
+        gap: 30px
+        &-item
+            flex: 1 1 30%
+            background-color: #FFF
+            border-radius: 8px
+            transition: all 0.5s
+            &:hover
+                background-color: #E6E6F0
+                transition: all 1s
+                .publication__body-item-desc
+                    h5
+                        color: $accent
+                        transition: all 0.5s
+                    .line
+                        background: #FFFF
+            a
+                display: flex
+                flex-direction: column
+                height: 100%
+                .publication__body-item-bg1
+                    background: url('../img/Publication-1.png') center/cover
+                    height: 200px
+                    border-radius: 8px 8px 0px 0px
+                .publication__body-item-bg2
+                    background: url('../img/Publication-2.png') center/cover
+                    height: 200px
+                    border-radius: 8px 8px 0px 0px
+                .publication__body-item-bg3
+                    background: url('../img/Publication-3.png') center/cover
+                    height: 200px
+                    border-radius: 8px 8px 0px 0px
+                .publication__body-item-bg4
+                    background: url('../img/Publication-4.png') center/cover
+                    height: 200px
+                    border-radius: 8px 8px 0px 0px
+                .publication__body-item-bg5
+                    background: url('../img/Publication-5.png') center/cover
+                    height: 200px
+                    border-radius: 8px 8px 0px 0px
+                .publication__body-item-bg6
+                    background: url('../img/Publication-6.png') center/cover
+                    height: 200px
+                    border-radius: 8px 8px 0px 0px
+                .publication__body-item-desc
+                    padding: 0 30px 42px 30px
+                    h5
+                        font-weight: 700
+                        font-size: 16px
+                        line-height: 20px
+                        color: $active_regular
+                        transition: all 0.5s
+                        padding: 30px 0 15px 0
+                    span
+                        font-weight: 700
+                        font-size: 12px
+                        line-height: 15px
+                        letter-spacing: 1px
+                        text-transform: uppercase
+                        color: $grey_bg_text
+                    .line
+                        max-width: 100%
+                        height: 4px
+                        background: #E6E6F0
+                        margin: 15px 0
+                        transition: all 0.5s
+                        @media screen and ( max-width: 768px )
+                            max-width: 80%
+                    p
+                        font-weight: 400
+                        font-size: 14px
+                        line-height: 22px
+                        color: #000000
+        &-btn
+            padding: 30px 0
+            display: flex
+            justify-content: center
+            align-items: center
+            button
+                background: $active_regular
+                -webkit-box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5)
+                box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5)
+                border-radius: 12px
+                padding: 18px 30px
+                cursor: pointer
+                &:hover
+                    background: #0085FF
+                a
+                    font-family: 'Montserrat'
+                    font-style: normal
+                    font-weight: 700
+                    font-size: 16px
+                    line-height: 20px
+                    text-align: center
+                    color: #FFFFFF

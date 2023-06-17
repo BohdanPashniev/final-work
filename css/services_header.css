@@ -253,6 +253,11 @@
   border-radius: 8px;
   color: white;
 }
+.header__contacts .lang a.lang-active:hover {
+  background: #F0145A;
+  border-radius: 8px;
+  color: white;
+}
 .header__contacts .lang a:hover {
   background-color: #B3B3BA;
   border-radius: 8px;
