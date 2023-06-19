@@ -1,0 +1,188 @@
+@import url(myFrameworks.css);
+@import url(footer.css);
+@import url(about_us_header.css);
+.container {
+  max-width: 1600px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 904px;
+    padding: 0 30px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 648px;
+    padding: 0 30px;
+    margin: auto;
+  }
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 425px) {
+  .lock {
+    overflow: hidden;
+  }
+}
+
+.content {
+  max-width: 1480px;
+  padding: 60px 60px 0 60px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 425px) {
+  .content {
+    padding: 30px 30px 0 30px;
+  }
+}
+.content__header {
+  height: 668px;
+}
+@media screen and (max-width: 425px) {
+  .content__header {
+    height: 585px;
+  }
+}
+.content__header h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #323264;
+  padding: 30px 0 15px 0;
+}
+.content__header span {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #B3B3BA;
+}
+.content__header-bg {
+  background: url("../img/publication-entry.png") center/cover;
+  border-radius: 12px;
+  height: 500px;
+}
+@media screen and (max-width: 425px) {
+  .content__header-bg {
+    height: 300px;
+    width: 315px;
+  }
+}
+.content__main {
+  border-top: 4px solid #E6E6F0;
+  border-bottom: 4px solid #E6E6F0;
+  padding: 30px 0 30px 0;
+  margin-top: 30px;
+}
+.content__main p {
+  font-size: 16px;
+  line-height: 26px;
+}
+.content__main h1 {
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  padding: 30px 0;
+}
+.content__main ol {
+  margin-bottom: 30px;
+}
+.content__main ol h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #46466E;
+  padding: 0 0 15px 0;
+}
+.content__main ol li {
+  padding-left: 10px;
+  margin-left: 30px;
+}
+.content__main ol li::marker {
+  color: #F0145A;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: right !important;
+}
+.content__main-bg {
+  height: 435px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 30px 0 60px 0;
+}
+.content__main-bg__item {
+  height: 398px;
+  width: 640px;
+  background: url("../img/publication-illustration.png") center/cover;
+}
+.content__main-bg__item::before {
+  content: "This is what the ad personalization settings window in your Google Account looks like";
+  position: absolute;
+  bottom: -15px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3B3BA;
+}
+.content__main h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #323264;
+  padding: 30px 0 15px 0;
+}
+.content .share {
+  padding: 30px 0;
+}
+.content .share a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 10px;
+  padding: 9px;
+  border-radius: 12px;
+  background: #F5F5FA;
+}
+.content .share a:hover {
+  background: #EDEDF7;
+}
+.content .share a:first-of-type {
+  margin-left: 0;
+}
+.content .share a img {
+  display: block;
+}

@@ -95,7 +95,7 @@
                 </div>
                 <div class="publications__body">
                     <div class="publications__body-item">
-                        <a href="">
+                        <a href="publications-entry.html">
                             <div class="publication__body-item-bg1"></div>
                             <div class="publication__body-item-desc">
                                 <h5>Equity associate</h5>
@@ -109,7 +109,7 @@
                         </a>
                     </div>
                     <div class="publications__body-item">
-                        <a href="">
+                        <a href="publications-entry.html">
                             <div class="publication__body-item-bg2"></div>
                             <div class="publication__body-item-desc">
                                 <h5>Penalty for the Good Corporation: what will happen to Google and others for
@@ -126,7 +126,7 @@
                         </a>
                     </div>
                     <div class="publications__body-item">
-                        <a href="">
+                        <a href="publications-entry.html">
                             <div class="publication__body-item-bg3"></div>
                             <div class="publication__body-item-desc">
                                 <h5>Millennial Testament</h5>
@@ -139,7 +139,7 @@
                         </a>
                     </div>
                     <div class="publications__body-item">
-                        <a href="">
+                        <a href="publications-entry.html">
                             <div class="publication__body-item-bg4"></div>
                             <div class="publication__body-item-desc">
                                 <h5>Language Law: How to Make Your Website Relevant</h5>
@@ -152,7 +152,7 @@
                         </a>
                     </div>
                     <div class="publications__body-item">
-                        <a href="">
+                        <a href="publications-entry.html">
                             <div class="publication__body-item-bg5"></div>
                             <div class="publication__body-item-desc">
                                 <h5>Reimbursement of the child's tuition fees in kindergarten and school</h5>
@@ -164,7 +164,7 @@
                         </a>
                     </div>
                     <div class="publications__body-item">
-                        <a href="">
+                        <a href="publications-entry.html">
                             <!-- <div class="publication__body-item-bg6"></div> -->
                             <div class="publication__body-item-desc">
                                 <h5>Currency control is dead, long live currency control!</h5>
@@ -178,7 +178,7 @@
                     </div>
                 </div>
                 <div class="publications__body-btn">
-                    <button type="button"><a href="">More publications</a></button>
+                    <button type="button"><a href="publications-entry.html">More publications</a></button>
                 </div>
             </div>
         </div>
@@ -248,6 +248,19 @@
             radioBtn.prop('checked', true);
         });
     });
+</script>
+<script>
+    function changeLanguage(language) {
+        var langLinks = document.querySelectorAll('.lang a');
+        for (var i = 0; i < langLinks.length; i++) {
+            langLinks[i].classList.remove('lang-active');
+        }
+
+        // Добавляем класс 'lang-active' к выбранному языку
+        event.target.classList.add('lang-active');
+
+        // Здесь вы можете выполнить другие действия, связанные с изменением языка
+    }
 </script>
 
 </html>

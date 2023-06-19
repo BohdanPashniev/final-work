@@ -235,7 +235,21 @@
             })
             $('.close').on('click', function () {
                 $('.header__menu-burger').removeClass('active');
+                $('body').toggleClass('lock');
             })
         });
+</script>
+<script>
+    function changeLanguage(language) {
+        var langLinks = document.querySelectorAll('.lang a');
+        for (var i = 0; i < langLinks.length; i++) {
+            langLinks[i].classList.remove('lang-active');
+        }
+
+        // Добавляем класс 'lang-active' к выбранному языку
+        event.target.classList.add('lang-active');
+
+        // Здесь вы можете выполнить другие действия, связанные с изменением языка
+    }
 </script>
 </html>
