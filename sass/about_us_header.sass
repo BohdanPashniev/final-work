@@ -94,13 +94,37 @@ $grey_bg_separator: #E6E6F0
             flex-direction: column
             justify-content: center
             background: #FFF
-            .close
-                top: 121px
-                right: 30px
-                position: absolute
-                color: #EC6F5D
-                z-index: 2
-                font-size: 18px
+            .close-button
+                width: 32px
+                height: 32px
+                position: relative
+                top: -20px
+                left: 160px
+                background: transparent
+                border-radius: 8px
+                transition: background 0.5s
+                cursor: pointer
+                &:hover
+                    background: $grey_bg_separator
+                    transition: background 0.5s
+                &::before
+                    content: ''
+                    background-color: #EC6F5D
+                    position: absolute
+                    width: 23.5px
+                    height: 2px
+                    top: 15px
+                    right: 4px
+                    transform: rotate(45deg)
+                &::after
+                    content: ''
+                    background-color: #EC6F5D
+                    position: absolute
+                    width: 23.5px
+                    height: 2px
+                    top: 15px
+                    right: 4px
+                    transform: rotate(-45deg)
             li
                 cursor: pointer
                 width: 100%

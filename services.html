@@ -21,8 +21,8 @@
                 <div class="header__logo">
                     <a href="index.html">
                         <picture>
+                            <source media="(max-width: 425px)" srcset="img/services_logo(425).png">
                             <img src="img/services_logo(max).png" alt="logo">
-                            <source media="(min-width: 425px)" srcset="img/services_logo(425).png">
                         </picture>
                     </a>
                 </div>
@@ -65,7 +65,7 @@
                 <div class="header__menu">
                     <a href="#" id="menu"><span></span></a>
                     <nav class="header__menu-burger">
-                        <ul><a class="close" id="menu">&#10006;</a>
+                        <ul><button class="close-button" id="menu"></button>
                             <li><a href="about us.html">about us</a></li>
                             <li><a href="services.html" class="link-active">services</a></li>
                             <li><a href="team.html">team</a></li>
@@ -209,14 +209,15 @@
 </body>
 <script>
     $(document).ready(function () {
-        $('#menu').on('click', function () {
-            $('.header__menu-burger').addClass('active');
-            $('body').toggleClass('lock');
-        })
-        $('.close').on('click', function () {
-            $('.header__menu-burger').removeClass('active');
-        })
-    });
+            $('#menu').on('click', function () {
+                $('.header__menu-burger').addClass('active');
+                $('body').toggleClass('lock');
+            })
+            $('.close-button').on('click', function () {
+                $('.header__menu-burger').removeClass('active');
+                $('body').toggleClass('lock');
+            })
+        });
 </script>
 <script>
 function changeLanguage(language) {

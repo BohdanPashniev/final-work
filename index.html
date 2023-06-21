@@ -116,7 +116,7 @@
                     <div class="header__menu">
                         <a href="#" id="menu"><span></span></a>
                         <nav class="header__menu-burger">
-                            <ul><a class="close" id="menu">&#10006;</a>
+                            <ul><button class="close-button" id="menu"></button>
                                 <li><a href="about us.html">about us</a></li>
                                 <li><a href="services.html">services</a></li>
                                 <li><a href="team.html">team</a></li>
@@ -380,7 +380,7 @@
         <section class="publications">
             <div class="container">
                 <div class="publications__link">
-                    <a href="">Publications</a>
+                    <a href="publications.html">Publications</a>
                     <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.5 2L8 6.5L3.5 11" stroke="#24A3FF" stroke-width="2" />
                     </svg>
@@ -388,7 +388,7 @@
                 <h4>We have something to tell</h4>
                 <div class="publications__body">
                     <div class="publications__item">
-                        <a href="">
+                        <a href="publications-entry.html">
                             <picture>
                                 <source media="(max-width: 425px)" srcset="img/pub1(425).png">
                                 <source media="(max-width: 1024px)" srcset="img/pub1(1024p).png">
@@ -403,7 +403,7 @@
                         </a>
                     </div>
                     <div class="publications__item">
-                        <a href="">
+                        <a href="publications-entry.html">
                             <picture>
                                 <source media="(max-width: 425px)" srcset="img/pub2(425).png">
                                 <source media="(max-width: 1024px)" srcset="img/pub2(1024).png">
@@ -421,7 +421,7 @@
                         </a>
                     </div>
                     <div class="publications__item">
-                        <a href="">
+                        <a href="publications-entry.html">
                             <picture>
                                 <source media="(max-width: 425px)" srcset="img/pub3(425).png">
                                 <source media="(max-width: 768px)" srcset="img/publication-tablet.png">
@@ -474,7 +474,7 @@
                 $('.header__menu-burger').addClass('active');
                 $('body').toggleClass('lock');
             })
-            $('.close').on('click', function () {
+            $('.close-button').on('click', function () {
                 $('.header__menu-burger').removeClass('active');
                 $('body').toggleClass('lock');
             })

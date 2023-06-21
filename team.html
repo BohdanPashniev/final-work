@@ -65,7 +65,7 @@
             <div class="header__menu">
                 <a href="#" id="menu"><span></span></a>
                 <nav class="header__menu-burger">
-                    <ul><a class="close" id="menu">&#10006;</a>
+                    <ul><button class="close-button" id="menu"></button>
                         <li><a href="about us.html">about us</a></li>
                         <li><a href="services.html">services</a></li>
                         <li><a href="" class="link-active">team</a></li>
@@ -233,7 +233,7 @@
                 $('.header__menu-burger').addClass('active');
                 $('body').toggleClass('lock');
             })
-            $('.close').on('click', function () {
+            $('.close-button').on('click', function () {
                 $('.header__menu-burger').removeClass('active');
                 $('body').toggleClass('lock');
             })

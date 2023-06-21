@@ -155,3 +155,107 @@ html
                 margin-left: 0
             img
                 display: block
+.publications
+    background-color: #F5F5FA
+    padding-top: 30px
+    &__link
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        a
+            font-weight: 700
+            font-size: 14px
+            line-height: 17px
+            letter-spacing: 1px
+            text-transform: uppercase
+            color: $active_regular
+            &:hover
+                color: $active_hover
+                path
+                    color: $active_hover
+            &:active
+                color: $active_active
+                path
+                    color: $active_active
+    h4
+        font-weight: 700
+        font-size: 38px
+        line-height: 46px
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        padding-bottom: 30px
+        padding-top: 10px
+    &__body
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        padding: 0px
+        gap: 30px
+        @media screen and ( max-width: 768px )
+            flex-wrap: wrap
+    &__item
+        width: 513px
+        background: #FFF
+        border-radius: 12px
+        height: 430px
+        overflow: hidden
+        @media screen and ( max-width: 1440px )
+            width: 420px
+            height: 450px
+        @media screen and ( max-width: 1025px )
+            width: 281.33px
+            height: 556px
+        @media screen and ( max-width: 768px )
+            flex: 1 0 47%
+            height: 514px
+            
+        a
+            display: block
+            cursor: pointer
+            border-radius: 12px
+            height: 100%
+            transition: all 0.5s
+            &:hover
+                background: #E6E6F0
+                transition: all 0.5s
+                .line
+                    background: #ffffff
+                    transition: all 0.5s
+        img
+            max-width: 100%
+            display: block
+            height: 200px
+        .line
+            max-width: 80%
+            height: 4px
+            background: #E6E6F0
+            margin: 0 auto
+            transition: all 0.5s
+            @media screen and ( max-width: 768px )
+                max-width: 80%
+        h5
+            font-weight: 700
+            font-size: 16px
+            line-height: 20px
+            color: $active_regular  
+            padding: 30px 30px 15px 30px
+            
+        span
+            display: block
+            font-weight: 700
+            font-size: 12px
+            line-height: 15px
+            letter-spacing: 1px
+            text-transform: uppercase
+            color: #B3B3BA
+            padding-bottom: 15px
+            padding-left: 30px
+        p
+            font-weight: 400
+            font-size: 14px
+            line-height: 22px
+            color: #000000
+            padding: 15px 30px 30px 30px

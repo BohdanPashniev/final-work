@@ -65,7 +65,7 @@
             <div class="header__menu">
                 <a href="#" id="menu"><span></span></a>
                 <nav class="header__menu-burger">
-                    <ul><a class="close" id="menu">&#10006;</a>
+                    <ul><button class="close-button" id="menu"></button>
                         <li><a href="about us.html">about us</a></li>
                         <li><a href="services.html">services</a></li>
                         <li><a href="" class="link-active">team</a></li>
@@ -100,13 +100,19 @@
                         <a href="">LinkedIn profile</a>
                     </div>
                     <div class="content__profile-bio">
-                        <p>Oksana heads the practice of international trade and shipping. He specializes in resolving disputes related to the purchase and sale of raw materials and transportation of goods by sea.
-                            Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents, container lines, as well as international banks and P&I clubs.
+                        <p>Oksana heads the practice of international trade and shipping. He specializes in resolving
+                            disputes related to the purchase and sale of raw materials and transportation of goods by
+                            sea.
+                            Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping
+                            agents, container lines, as well as international banks and P&I clubs.
                         </p>
                         <h3>Education</h3>
                         <p>National University "Odessa Law Academy", Master of Law.</p>
                         <h3>Experience</h3>
-                        <p>Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA. Danilo also represents the interests of clients in the state courts of Ukraine on similar disputes, as well as in the ICAC and IAC at the CCI of Ukraine</p>
+                        <p>Her professional experience includes resolving disputes under English law and representing
+                            interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA. Danilo also
+                            represents the interests of clients in the state courts of Ukraine on similar disputes, as
+                            well as in the ICAC and IAC at the CCI of Ukraine</p>
                     </div>
                 </div>
             </div>
@@ -143,13 +149,15 @@
 </body>
 <script>
     $(document).ready(function () {
-            $('#menu').on('click', function () {
-                $('.header__menu-burger').addClass('active');
-                $('body').toggleClass('lock');
-            })
-            $('.close').on('click', function () {
-                $('.header__menu-burger').removeClass('active');
-            })
-        });
+        $('#menu').on('click', function () {
+            $('.header__menu-burger').addClass('active');
+            $('body').toggleClass('lock');
+        })
+        $('.close-button').on('click', function () {
+            $('.header__menu-burger').removeClass('active');
+            $('body').toggleClass('lock');
+        })
+    });
 </script>
+
 </html>
