@@ -186,6 +186,12 @@ html {
     height: 640px;
   }
 }
+@media screen and (max-width: 425px) {
+  .popup {
+    width: 315px;
+    height: 620px;
+  }
+}
 .popup.active {
   display: block;
 }
@@ -457,6 +463,12 @@ html {
   .close-button {
     bottom: 560px;
     right: -290px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .close-button {
+    bottom: 520px;
+    right: -200px;
   }
 }
 .close-button:hover {
