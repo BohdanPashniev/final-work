@@ -1,0 +1,391 @@
+@import url(about_us_header.css);
+@import url(footer.css);
+@import url(myFrameworks.css);
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1630px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 904px;
+    padding: 0 30px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 648px;
+    padding: 0 30px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .lock {
+    overflow: hidden !important;
+  }
+}
+
+.content {
+  padding: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1360px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
+}
+.content__contact {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 21px;
+  line-height: 30px;
+}
+.content__contact p {
+  border-bottom: 4px solid #E6E6F0;
+  color: #323264;
+  padding-bottom: 30px;
+}
+.content__contact-number {
+  padding: 30px 0 15px 0;
+  color: #46466E;
+}
+.content__contact-mail {
+  color: #24A3FF;
+  padding-bottom: 30px;
+  border-bottom: 4px solid #E6E6F0;
+}
+.content__contact-facebook {
+  position: relative;
+  padding-top: 30px;
+  color: #24A3FF;
+}
+.content__contact-facebook path {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.content__contact-facebook:hover path {
+  fill: #F0145A;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.content__contact-facebook:hover::after {
+  color: #F0145A;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.content__contact-facebook::after {
+  content: "Our page on facebook";
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: absolute;
+  margin-left: 10px;
+  width: 105px;
+  height: 32px;
+  top: 33px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.popup {
+  width: 650px;
+  height: 603px;
+  background-color: #F5F5FA;
+  padding: 30px 30px 30px 30px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 375px;
+    height: 640px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .popup {
+    width: 315px;
+    height: 620px;
+  }
+}
+.popup-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .popup-content {
+    gap: 15px;
+  }
+}
+.popup-content h2 {
+  position: relative;
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 46px;
+}
+@media screen and (max-width: 768px) {
+  .popup-content h2 {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+.popup-content p {
+  font-weight: 700;
+  font-size: 14px;
+  color: #B3B3BA;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.popup-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 15px;
+  width: 100%;
+}
+.popup-content form input {
+  padding: 15px 15px;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+}
+.popup-content form input:focus {
+  outline: 1px solid #323264;
+}
+.popup-content form textarea {
+  resize: none;
+}
+.popup-content form textarea:focus {
+  outline: 1px solid #323264;
+}
+.popup-content form .Name::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Name::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Name:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Name::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Name::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Message {
+  padding: 15px 15px;
+  border-radius: 12px;
+}
+.popup-content form .Message::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Message::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Message:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Message::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Message::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Phone::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Phone::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Phone:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Phone::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Phone::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Email::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Email::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Email:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Email::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup-content form .Email::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.popup .popup-btn-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.popup .popup-btn-holder .popup-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  background: #24A3FF;
+  -webkit-box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+          box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  padding: 18px 30px;
+  cursor: pointer;
+}
+.popup .popup-btn-holder .popup-btn:hover {
+  background: #0085FF;
+}
+.popup .popup-btn-holder .popup-btn:active {
+  -webkit-box-shadow: 0px 0px 20px rgb(36, 163, 255);
+          box-shadow: 0px 0px 20px rgb(36, 163, 255);
+}
+.popup .popup-btn-holder .popup-btn span {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}

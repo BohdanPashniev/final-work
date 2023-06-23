@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/team-entry.css">
+    <link rel="stylesheet" href="css/contact.css">
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <title>Team</title>
+    <title>Contact</title>
 </head>
 
 <body>
@@ -55,9 +55,9 @@
                         <ul class="navigation">
                             <li><a href="about us.html">about us</a></li>
                             <li><a href="services.html">services</a></li>
-                            <li><a href="team.html" class="link-active">team</a></li>
+                            <li><a href="team.html">team</a></li>
                             <li><a href="publications.html">publications</a></li>
-                            <li><a href="contact.html">contact</a></li>
+                            <li><a href="contact.html" class="link-active">contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -68,9 +68,9 @@
                     <ul><button class="close-button" id="menu"></button>
                         <li><a href="about us.html">about us</a></li>
                         <li><a href="services.html">services</a></li>
-                        <li><a href="" class="link-active">team</a></li>
+                        <li><a href="">team</a></li>
                         <li><a href="publications.html">publications</a></li>
-                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="" class="link-active">contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -78,43 +78,38 @@
     </div>
     <main>
         <div class="content">
-            <div class="content__body">
-                <div class="content__photo">
-                    <div class="bg"></div>
-                    <div class="content__profile-header-dn">
-                        <h1>
-                            Oksana Kobzar
-                        </h1>
-                        <p>Equity partner, Attorney-at-law</p>
-                        <a href="">kobzar@forstudy.space</a>
-                        <a href="">LinkedIn profile</a>
+            <div class="content__contact">
+                <p>Kyiv, Mechnikova str, 14</p>
+                <a href="tel:0800 211 927" class="content__contact-number">0800 211 927</a>
+                <a href="mailto:contact@forstudy.space" class="content__contact-mail">contact@forstudy.space</a>
+                <a href="" class="content__contact-facebook">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+                            fill="#24A3FF" />
+                    </svg>
+                </a>
+            </div>
+            <div class="content__form">
+                <div class="popup">
+                    <div class="popup-content">
+                        <h2>We would like to help you</h2>
+                        <form action="">
+                            <input type="text" name="Name" class="Name" placeholder="Name" required>
+                            <textarea type="text" name="Message" class="Message" placeholder="Message" rows="7" ></textarea>
+                        </form>
+                        <p>How to answer you?</p>
+                        <form action="">
+                            <input type="tel" name="Phone number" class="Phone" placeholder="Phone number" required minlength="9" maxlength="13">
+                            <input type="email" name="Email" class="Email" placeholder="Email" required>
+                        </form>
+                        <div class="popup-btn-holder">
+                            <button type="button" class="popup-btn">
+                                <span>Send message</span>
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="content__profile">
-                    <div class="content__profile-header">
-                        <h1>
-                            Oksana Kobzar
-                        </h1>
-                        <p>Equity partner, Attorney-at-law</p>
-                        <a href="">kobzar@forstudy.space</a>
-                        <a href="">LinkedIn profile</a>
-                    </div>
-                    <div class="content__profile-bio">
-                        <p>Oksana heads the practice of international trade and shipping. He specializes in resolving
-                            disputes related to the purchase and sale of raw materials and transportation of goods by
-                            sea.
-                            Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping
-                            agents, container lines, as well as international banks and P&I clubs.
-                        </p>
-                        <h3>Education</h3>
-                        <p>National University "Odessa Law Academy", Master of Law.</p>
-                        <h3>Experience</h3>
-                        <p>Her professional experience includes resolving disputes under English law and representing
-                            interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA. Danilo also
-                            represents the interests of clients in the state courts of Ukraine on similar disputes, as
-                            well as in the ICAC and IAC at the CCI of Ukraine</p>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
@@ -149,15 +144,27 @@
 </body>
 <script>
     $(document).ready(function () {
-        $('#menu').on('click', function () {
-            $('.header__menu-burger').addClass('active');
-            $('body').toggleClass('lock');
-        })
-        $('.close-button').on('click', function () {
-            $('.header__menu-burger').removeClass('active');
-            $('body').toggleClass('lock');
-        })
-    });
+            $('#menu').on('click', function () {
+                $('.header__menu-burger').addClass('active');
+                $('body').toggleClass('lock');
+            })
+            $('.close-button').on('click', function () {
+                $('.header__menu-burger').removeClass('active');
+                $('body').toggleClass('lock');
+            })
+        });
 </script>
+<script>
+    function changeLanguage(language) {
+        var langLinks = document.querySelectorAll('.lang a');
+        for (var i = 0; i < langLinks.length; i++) {
+            langLinks[i].classList.remove('lang-active');
+        }
 
+        // Добавляем класс 'lang-active' к выбранному языку
+        event.target.classList.add('lang-active');
+
+        // Здесь вы можете выполнить другие действия, связанные с изменением языка
+    }
+</script>
 </html>
