@@ -1,3 +1,8 @@
+.link-active {
+  color: #F0145A !important;
+  border-bottom: 2px solid #F0145A;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,12 +109,12 @@
 }
 .header__menu-burger {
   margin: 0;
-  background: #323264;
+  background: #000055;
   position: absolute;
   width: 100vw;
   height: 100vh;
   top: -3290%;
-  right: -30px;
+  right: -15px;
   -webkit-transition: all ease-out 1s;
   -o-transition: all ease-out 1s;
   transition: all ease-out 1s;
@@ -130,6 +135,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 12px 12px 0px 0px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -216,7 +222,7 @@
   width: 100vw;
   height: 100vh;
   top: -77px;
-  right: -29px;
+  right: -15px;
   overflow: hidden;
   background: #323264;
   z-index: 1;

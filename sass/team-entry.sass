@@ -42,11 +42,13 @@ $grey_bg_separator: #E6E6F0
         max-width: 1080px
     @media screen and ( max-width: 1024px )
         max-width: 904px
+        padding: 0 60px
     @media screen and ( max-width: 768px )
-        max-width: 648px
+        margin: 0
+    @media screen and ( max-width: 425px )
+        padding: 0 30px
     &__body
         display: flex
-        align-items: center
         column-gap: 60px
         padding-top: 60px
         padding-bottom: 60px
@@ -158,6 +160,8 @@ $grey_bg_separator: #E6E6F0
                         content: none
         &-bio
             border-top: 4px solid #E6E6F0
+            @media screen and ( max-width: 768px )
+                flex: 1 1 100%
             p
                 line-height: 26px
                 padding-top: 30px

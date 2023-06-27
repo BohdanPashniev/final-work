@@ -76,7 +76,7 @@
   width: 32px;
   height: 32px;
   color: white;
-  z-index: 2;
+  z-index: 6;
   padding: 7px;
 }
 @media screen and (max-width: 425px) {
@@ -221,7 +221,7 @@
   width: 100vw;
   height: 100vh;
   top: -67px;
-  right: -30px;
+  right: -15px;
   overflow: hidden;
   background: #323264;
   z-index: 1;

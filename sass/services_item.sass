@@ -1,6 +1,6 @@
 @import url(footer.css)
 @import url(myFrameworks.css)
-@import url(services_header.css)
+@import url(header.css)
 $main_regular: #323264
 $main_alt: #46466E
 $main_soft: #686887
@@ -40,19 +40,20 @@ $grey_bg_separator: #E6E6F0
         opacity: 1
         transform: translateY(0)
 .container
-    max-width: 1630px
+    max-width: 1600px
     padding: 0 15px
     margin: 0 auto
     @media screen and ( max-width: 1440px )
         max-width: 1320px
     @media screen and ( max-width: 1024px )
         max-width: 904px
-        padding: 0 30px
-        margin: auto
+        padding: 0 60px
     @media screen and ( max-width: 768px )
         max-width: 648px
-        padding: 0 30px
-        margin: auto
+        padding: 0 60px
+        margin: 0
+    @media screen and ( max-width: 425px )
+        padding: 0 15px
 // *
 //     border: 1px solid
 html
@@ -152,7 +153,11 @@ html
     @media screen and ( max-width: 425px )
         width: 315px
         height: 620px
-
+    @media screen and ( max-width: 375px )
+        width: 315px
+        height: 580px
+        top: 50%
+        left: 42%
     &.active
         display: block
 
@@ -163,6 +168,8 @@ html
         gap: 30px
         @media screen and ( max-width: 768px )
             gap: 15px
+        @media screen and ( max-width: 375px )
+            gap: 10px
         h2
             position: relative
             @include gradient_redtext
@@ -264,6 +271,9 @@ html
     @media screen and ( max-width: 425px )
         bottom: 520px
         right: -200px
+    @media screen and ( max-width: 375px )
+        bottom: 535px
+        right: -235px
     &:hover
         background: $grey_bg_separator
         transition: background 0.5s
@@ -352,73 +362,68 @@ html
         padding-top: 10px
     &__body
         display: flex
-        flex-direction: row
-        align-items: flex-start
-        padding: 0px
+        flex-wrap: wrap
+        align-items: stretch
         gap: 30px
-        @media screen and ( max-width: 768px )
-            flex-wrap: wrap
-    &__item
-        width: 513px
-        background: #FFF
-        border-radius: 12px
-        height: 430px
-        overflow: hidden
-        @media screen and ( max-width: 1440px )
-            width: 420px
-            height: 450px
-        @media screen and ( max-width: 1025px )
-            width: 281.33px
-            height: 556px
-        @media screen and ( max-width: 768px )
-            flex: 1 0 47%
-            height: 514px
-
-        a
-            display: block
-            cursor: pointer
-            border-radius: 12px
-            height: 100%
+        &-item
+            flex: 1 1 30%
+            background-color: #FFF
+            border-radius: 8px
             transition: all 0.5s
+            @media screen and ( max-width: 425px )
+                flex: 1 1 100%
             &:hover
-                background: #E6E6F0
-                transition: all 0.5s
-                .line
-                    background: #ffffff
-                    transition: all 0.5s
-        img
-            max-width: 100%
-            display: block
-            height: 200px
-        .line
-            max-width: 80%
-            height: 4px
-            background: #E6E6F0
-            margin: 0 auto
-            transition: all 0.5s
-            @media screen and ( max-width: 768px )
-                max-width: 80%
-        h5
-            font-weight: 700
-            font-size: 16px
-            line-height: 20px
-            color: $active_regular
-            padding: 30px 30px 15px 30px
-
-        span
-            display: block
-            font-weight: 700
-            font-size: 12px
-            line-height: 15px
-            letter-spacing: 1px
-            text-transform: uppercase
-            color: #B3B3BA
-            padding-bottom: 15px
-            padding-left: 30px
-        p
-            font-weight: 400
-            font-size: 14px
-            line-height: 22px
-            color: #000000
-            padding: 15px 30px 30px 30px
+                background-color: #E6E6F0
+                transition: all 1s
+                .publication__body-item-desc
+                    h5
+                        color: $accent
+                        transition: all 0.5s
+                    .line
+                        background: #FFFF
+            a
+                display: flex
+                flex-direction: column
+                height: 100%
+                .publication__body-item-bg1
+                    background: url('../img/Publication-1.png') center/cover
+                    height: 200px
+                    border-radius: 8px 8px 0px 0px
+                .publication__body-item-bg2
+                    background: url('../img/Publication-2.png') center/cover
+                    height: 200px
+                    border-radius: 8px 8px 0px 0px
+                .publication__body-item-bg3
+                    background: url('../img/Publication-3.png') center/cover
+                    height: 200px
+                    border-radius: 8px 8px 0px 0px
+                .publication__body-item-desc
+                    padding: 0 30px 42px 30px
+                    h5
+                        font-weight: 700
+                        font-size: 16px
+                        line-height: 20px
+                        color: $active_regular
+                        transition: all 0.5s
+                        padding: 30px 0 15px 0
+                    span
+                        font-weight: 700
+                        font-size: 12px
+                        line-height: 15px
+                        letter-spacing: 1px
+                        text-transform: uppercase
+                        color: $grey_bg_text
+                    .line
+                        max-width: 100%
+                        height: 4px
+                        background: #E6E6F0
+                        margin: 15px 0
+                        transition: all 0.5s
+                        @media screen and ( max-width: 768px )
+                            max-width: 80%
+                    p
+                        font-weight: 400
+                        font-size: 14px
+                        line-height: 22px
+                        color: #000000
 

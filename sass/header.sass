@@ -9,7 +9,9 @@ $grey_bg: #F5F5FA
 $grey_bg_alt: #EDEDF7
 $grey_bg_text: #B3B3BA
 $grey_bg_separator: #E6E6F0
-
+.link-active
+    color: $accent !important
+    border-bottom: 2px solid $accent
 .header
     display: flex
     flex-direction: row
@@ -74,12 +76,12 @@ $grey_bg_separator: #E6E6F0
 
     &__menu-burger
         margin: 0
-        background: #323264
+        background: #000055
         position: absolute
         width: 100vw
         height: 100vh
         top: -3290%
-        right: -30px
+        right: -15px
         transition: all ease-out 1s
         overflow: hidden
         z-index: 1
@@ -90,6 +92,7 @@ $grey_bg_separator: #E6E6F0
             display: flex
             align-items: center
             flex-direction: column
+            border-radius: 12px 12px 0px 0px
             justify-content: center
             background: #FFF
             .close-button
@@ -149,7 +152,7 @@ $grey_bg_separator: #E6E6F0
         width: 100vw
         height: 100vh
         top: -77px
-        right: -29px
+        right: -15px
         overflow: hidden
         background: #323264
         z-index: 1

@@ -30,19 +30,20 @@ $grey_bg_separator: #E6E6F0
 @mixin gradient_redtext
     background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
 .container
-    max-width: 1630px
+    max-width: 1600px
     padding: 0 15px
     margin: 0 auto
     @media screen and ( max-width: 1440px )
         max-width: 1320px
     @media screen and ( max-width: 1024px )
         max-width: 904px
-        padding: 0 30px
-        margin: auto
+        padding: 0 60px
     @media screen and ( max-width: 768px )
         max-width: 648px
-        padding: 0 30px
-        margin: auto
+        padding: 0 60px
+        margin: 0
+    @media screen and ( max-width: 425px )
+        padding: 0 15px
 html
     font-family: 'Montserrat', sans-serif
     font-size: 16px
