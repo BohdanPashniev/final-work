@@ -83,7 +83,7 @@ html {
 @media screen and (max-width: 425px) {
   .content__header-bg {
     height: 300px;
-    width: 315px;
+    width: 100%;
   }
 }
 .content__main {
@@ -155,6 +155,7 @@ html {
   font-size: 14px;
   line-height: 22px;
   color: #B3B3BA;
+  margin-left: 20px;
 }
 .content__main h3 {
   font-weight: 700;
@@ -270,6 +271,13 @@ html {
   transition: all 0.5s;
   min-height: 430px;
 }
+@media screen and (max-width: 425px) {
+  .publications__body-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
 .publications__body-item:hover {
   background-color: #E6E6F0;
   -webkit-transition: all 1s;
@@ -339,11 +347,6 @@ html {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-}
-@media screen and (max-width: 768px) {
-  .publications__body-item a .publication__body-item-desc .line {
-    max-width: 80%;
-  }
 }
 .publications__body-item a .publication__body-item-desc p {
   font-weight: 400;

@@ -239,11 +239,6 @@ html {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-@media screen and (max-width: 768px) {
-  .publications__body-item a .publication__body-item-desc .line {
-    max-width: 80%;
-  }
-}
 .publications__body-item a .publication__body-item-desc p {
   font-weight: 400;
   font-size: 14px;
