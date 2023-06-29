@@ -119,7 +119,7 @@ html {
 @media screen and (max-width: 425px) {
   .top_section .symbol {
     left: calc(50% - 266.98px - 0.02px);
-    top: calc(50% - 155px);
+    top: calc(50% - 160px);
   }
 }
 @media screen and (max-width: 1024px) {
@@ -157,8 +157,8 @@ html {
 }
 @media screen and (max-width: 425px) {
   .top_section .symbol p {
-    left: calc(50% - 138px);
-    top: calc(50% - 66px);
+    left: calc(50% - 125px);
+    top: calc(50% - 75px);
     width: 315px;
   }
 }

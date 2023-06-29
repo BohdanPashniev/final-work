@@ -33,7 +33,7 @@ html {
 }
 @media screen and (max-width: 425px) {
   .container {
-    padding: 0 30px;
+    padding: 0 15px;
   }
 }
 
@@ -63,7 +63,7 @@ html {
 @media screen and (max-width: 1024px) {
   .content {
     max-width: 904px;
-    padding: 0 60px;
+    padding: 30px 60px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -74,7 +74,7 @@ html {
 }
 @media screen and (max-width: 425px) {
   .content {
-    padding: 0 15px;
+    padding: 15px;
     gap: 30px;
   }
 }
