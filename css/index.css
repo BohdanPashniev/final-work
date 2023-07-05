@@ -38,19 +38,12 @@
 @media screen and (max-width: 1024px) {
   .container {
     max-width: 904px;
-    padding: 0 60px;
   }
 }
 @media screen and (max-width: 768px) {
   .container {
     max-width: 648px;
-    padding: 0 60px;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 425px) {
-  .container {
-    padding: 0 15px;
+    margin: 0 auto;
   }
 }
 
@@ -914,8 +907,8 @@ html {
 }
 .publications__body-item {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 30%;
-          flex: 1 1 30%;
+      -ms-flex: 1 1 35%;
+          flex: 1 1 35%;
   background-color: #FFF;
   border-radius: 8px;
   -webkit-transition: all 0.5s;

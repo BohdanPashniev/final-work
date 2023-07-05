@@ -38,10 +38,7 @@ h1 {
   font-weight: 700;
   font-size: 38px;
   line-height: 46px;
-  padding-bottom: 60px;
-  padding-top: 60px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 60px 15px;
 }
 @media screen and (max-width: 1440px) {
   h1 {
@@ -60,7 +57,7 @@ h1 {
 }
 
 .team {
-  margin-bottom: 60px;
+  margin-bottom: 120px;
 }
 .team__row {
   display: -webkit-box;

@@ -14,19 +14,11 @@
 @media screen and (max-width: 1024px) {
   .container {
     max-width: 904px;
-    padding: 0 60px;
   }
 }
 @media screen and (max-width: 768px) {
   .container {
     max-width: 648px;
-    padding: 0 60px;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 425px) {
-  .container {
-    padding: 0 15px;
   }
 }
 .container .wrap {
@@ -123,7 +115,7 @@ html {
 
 .publications {
   padding: 60px 0 0 0;
-  margin: 60px 0 0 0;
+  margin: 160px 0 0 0;
   background-color: #F5F5FA;
 }
 .publications__body {
@@ -139,8 +131,8 @@ html {
 }
 .publications__body-item {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 30%;
-          flex: 1 1 30%;
+      -ms-flex: 1 1 40%;
+          flex: 1 1 40%;
   background-color: #FFF;
   border-radius: 8px;
   -webkit-transition: all 0.5s;

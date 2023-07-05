@@ -14,19 +14,11 @@
 @media screen and (max-width: 1024px) {
   .container {
     max-width: 904px;
-    padding: 0 60px;
   }
 }
 @media screen and (max-width: 768px) {
   .container {
     max-width: 648px;
-    padding: 0 60px;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 425px) {
-  .container {
-    padding: 0 15px;
   }
 }
 
@@ -58,12 +50,11 @@ html {
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
-  padding: 60px 10px 60px 10px;
+  padding: 60px 15px;
 }
 @media screen and (max-width: 1024px) {
   .services {
     max-width: 904px;
-    padding: 60px 30px 60px 30px;
     margin: auto;
   }
 }
