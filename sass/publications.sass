@@ -82,6 +82,7 @@ $grey_bg_separator: #E6E6F0
                     align-items: center
                     padding: 0 25px
                     z-index: 5
+                    font-weight: 700
                     position: relative
                     &:first-child
                         background-color: #FFF
@@ -109,18 +110,22 @@ html
 
 .publications
     padding: 60px 0 0 0
-    margin: 160px 0 0 0
+    margin: 60px 0 0 0
     background-color: $grey_bg
+    @media screen and ( max-width: 910px )
+        margin: 160px 0
     &__body
         display: flex
         flex-wrap: wrap
         align-items: stretch
         gap: 30px
         &-item
-            flex: 1 1 40%
+            flex: 1 1 30%
             background-color: #FFF
             border-radius: 8px
             transition: all 0.5s
+            @media screen and ( max-width: 768px )
+                flex: 1 1 33%
             @media screen and ( max-width: 425px )
                 flex: 1 1 100%
             &:hover

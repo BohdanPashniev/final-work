@@ -80,6 +80,7 @@
           align-items: center;
   padding: 0 25px;
   z-index: 5;
+  font-weight: 700;
   position: relative;
 }
 .container .wrap__holder label span:first-child {
@@ -115,8 +116,13 @@ html {
 
 .publications {
   padding: 60px 0 0 0;
-  margin: 160px 0 0 0;
+  margin: 60px 0 0 0;
   background-color: #F5F5FA;
+}
+@media screen and (max-width: 910px) {
+  .publications {
+    margin: 160px 0;
+  }
 }
 .publications__body {
   display: -webkit-box;
@@ -131,13 +137,20 @@ html {
 }
 .publications__body-item {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40%;
-          flex: 1 1 40%;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
   background-color: #FFF;
   border-radius: 8px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .publications__body-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 33%;
+            flex: 1 1 33%;
+  }
 }
 @media screen and (max-width: 425px) {
   .publications__body-item {

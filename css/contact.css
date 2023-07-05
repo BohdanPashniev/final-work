@@ -63,7 +63,7 @@ html {
 @media screen and (max-width: 1024px) {
   .content {
     max-width: 904px;
-    padding: 30px 60px;
+    padding: 60px 60px;
   }
 }
 @media screen and (max-width: 768px) {

@@ -78,11 +78,21 @@
   color: white;
   z-index: 2;
   padding: 7px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media screen and (max-width: 425px) {
   .header__menu {
     display: block;
   }
+}
+.header__menu:hover {
+  background-color: #E6E6F0;
+  border-radius: 8px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .header__menu::before {
   content: "";
