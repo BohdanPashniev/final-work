@@ -246,7 +246,7 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
     position: relative;
-    z-index: 2;
+    z-index: 1;
   }
 }
 .experience__list nav {
